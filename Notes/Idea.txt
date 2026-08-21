@@ -1,1 +1,99 @@
-This focus makes the project significantly stronger. Having personal lived experience gives your team a clear engineering goal and authentic user-testing insight that judges love.Core Concept: Multi-Array Haptic Spatial MappingInstead of a single distance sensor that just beeps (which blocks hearing and only covers one point), you build a wearable array that translates 3D spatial depth into tactile feedback on the skin.Recommended Setup: A chest harness or glove housing a 3x3 matrix of sensors paired with matching vibration motors (ERM coin motors or LRAs) worn against the skin (e.g., forearm or upper chest).Top row sensors detect head-height barriers (door frames, overhanging branches).Middle row sensors detect waist-height obstacles (tables, cars).Bottom row sensors detect low ground obstacles (curbs, drop-offs, stairs).Division of Responsibilities Role Core Responsibilities Engineers (2)Physical Rig & Circuits: Design 3D-printed mounts, wire multiplexed ToF/Ultrasonic sensor arrays, integrate haptic driver chips (DRV2605L), manage battery power regulation, and build wearable ergonomics.Coders (2)Embedded Logic & Algorithms: Program microcontroller (ESP32/Teensy) reading 9 sensor channels via I2C/SPI, write filtering algorithms (moving average / Kalman filter), map distance values to PWM vibration frequency/intensity curves.Scientific Novelty (Why It Isn't Easily Google-able)Most simple DIY projects map distance directly to vibration intensity ($Distance \propto Intensity$). That gets overwhelming fast. To stand out, your team can test and compare algorithmic feedback modes:Velocity-Sensitive Warning Mode: Vibration activates only when the rate of closure (approach speed) toward an obstacle exceeds a safety threshold.Edge & Silhouette Detection: The algorithm compares neighboring sensors in the $3\times3$ grid to vibrate only along the outer contour of an obstacle, helping the user feel its shape and opening.Logarithmic Tactile Scaling: Human skin senses changes in vibration non-linearly. Programming a logarithmic intensity curve matches human perception far better than a linear curve.
+PROJECT TITLE: HaptiSight - Multi-Array Wearable Spatial-Depth-to-Tactile Interface for Visually Impaired Navigation
+
+1. PROJECT OVERVIEW AND HYPOTHESIS
+Standard white canes and guide dogs leave a critical gap: they primarily identify ground-level obstacles directly in front of the user. Head-height hazards (low tree branches, signposts, open cabinet doors, suspended overhangs) remain undetectable until contact occurs. Existing electronic travel aids (ETAs) often rely on single-point ultrasonic sensors that trigger audio beeps. Audio alerts pollute critical environmental hearing cues, while single-point measurements fail to convey spatial context or object geometry.
+
+This project develops an integrated wearable system (a chest harness or forearm sleeve) featuring a 3x3 matrix of Time-of-Flight (ToF) distance sensors paired with a corresponding 3x3 matrix of haptic vibration motors. By mapping 3D spatial depth arrays into real-time tactile intensity and frequency patterns on the skin, the device translates environmental geometry into touch perception without requiring visual sight or compromising hearing.
+
+Hypothesis: Implementing a non-linear, edge-detecting haptic mapping algorithm will reduce obstacle navigation times and collision frequencies by at least 40% compared to traditional linear single-sensor distance-to-vibration feedback mechanisms.
+
+2. HARDWARE AND SYSTEM ARCHITECTURE (ENGINEERING TEAM)
+The engineering team handles component selection, power distribution, circuit design, signal multiplexing, and wearable ergonomics.
+
+A. Microcontroller Unit (MCU):
+
+* Primary MCU: ESP32-S3 or Teensy 4.1. Preferred due to high clock speeds, hardware I2C/SPI buses, low power consumption, and dual-core processing capabilities (allowing core 0 to process sensor inputs while core 1 manages haptic motor outputs).
+
+B. Sensor Matrix (3x3 Grid):
+
+* Sensor Type: VL53L1X Time-of-Flight (ToF) laser-ranging sensors (or Ultrasonic JSN-SR04T / MB1010 for wider cone sensing).
+* Arrangement: 3 rows by 3 columns mounted on a rigid/flexible chest matrix covering three elevation zones:
+* Top Row (3 sensors): Overhead and head-height field-of-view (1.5 m to 2.2 m above ground).
+* Middle Row (3 sensors): Mid-torso and waist-height field-of-view (0.7 m to 1.5 m).
+* Bottom Row (3 sensors): Low-level hazards, steps, and curbs (0 m to 0.7 m).
+
+
+* Multiplexing: Since VL53L1X sensors share a default I2C address, use a TCA9548A 8-channel I2C multiplexer (or two multiplexers daisy-chained) to query each sensor rapidly without address conflicts.
+
+C. Haptic Actuator Array:
+
+* Motors: Linear Resonant Actuators (LRAs) or Eccentric Rotating Mass (ERM) coin vibration motors (e.g., 10mm x 2.0mm).
+* Drivers: DRV2605L haptic motor driver chips connected via I2C, or transistor/MOSFET driver arrays (e.g., ULN2003 or custom MOSFET gates) controlled via Pulse-Width Modulation (PWM).
+* Layout: Worn against a skin surface with high tactile resolution, such as the inner forearm, upper chest, or upper back.
+
+D. Power Management & Mechanicals:
+
+* Power: 3.7V LiPo battery (2000mAh+) feeding a step-up/step-down buck boost regulator supplying clean 3.3V and 5.0V rails.
+* Chassis: Custom 3D-printed modular sensor housing featuring 15-degree angled mounts for the top and bottom sensor rows to maximize vertical field-of-view.
+
+3. SOFTWARE AND ALGORITHMIC DESIGNS (CODING TEAM)
+The coding team handles signal acquisition, noise filtering, spatial algorithms, and haptic rendering curves.
+
+A. Data Pipeline and Filtering:
+
+1. Matrix Polling: Continuous sequential polling of all 9 sensors via the I2C multiplexer at a target refresh rate of 30 Hz to 50 Hz.
+2. Noise Suppression: Apply a moving median filter combined with a low-pass exponential filter to remove false reflections, specular noise, and outdoor sun-glare anomalies.
+
+B. Experimental Feedback Algorithms (To Be Compared):
+
+* Mode 1: Linear Direct Distance Mapping
+* Formula: V_out = V_max * (1 - (D_measured / D_max))
+* Vibration intensity scales proportionally with distance. Simple, but quickly leads to skin desensitization.
+
+
+* Mode 2: Logarithmic Skin-Adapted Scaling
+* Human tactile perception follows Weber-Fechner laws (non-linear sensitivity).
+* Formula: V_out = V_max * (log(D_max / max(D_measured, D_min)) / log(D_max / D_min))
+* Provides subtle feedback for distant objects while rapidly ramping up intensity as an obstacle enters the immediate safety zone (under 1 meter).
+
+
+* Mode 3: Velocity-Sensitive Closure Rate Mode
+* Calculates delta distance over time (dD/dt).
+* Actuators remain silent for stationary distant objects, but activate with high intensity if the rate of closure toward an obstacle indicates imminent collision.
+
+
+* Mode 4: Spatial Edge & Silhouette Detection
+* The MCU calculates spatial gradients across neighboring matrix cells: G_x = |D(x+1, y) - D(x, y)| and G_y = |D(x, y+1) - D(x, y)|.
+* Vibrate actuators only where a significant depth discontinuity occurs, allowing the wearer to feel the boundary, door opening, or outline of an object.
+
+
+
+4. EXPERIMENTAL TESTING METHODOLOGY (SCIENCE FAIR DATA)
+To qualify as an advanced science fair submission, quantitative performance metrics must be collected across multiple experimental trials.
+
+A. Variables:
+
+* Independent Variable: Haptic algorithm type (Linear, Logarithmic, Velocity-Sensitive, Edge-Detection) and sensor configuration.
+* Dependent Variables:
+1. Time to navigate a standardized 15-meter obstacle course (seconds).
+2. Total number of physical collisions (head, torso, ground).
+3. Spatial recognition accuracy (percentage of correct identification of mock obstacles: doorway, pole, low hanging branch, box on floor).
+
+
+* Controlled Variables: Course layout, obstacle dimensions, walking path width, ambient lighting, and ear protection/masking noise worn by subjects to prevent reliance on acoustic echoes.
+
+B. Testing Protocol:
+
+1. Construct a standardized, repeatable indoor/outdoor maze containing 10 hazards (3 head-height, 4 torso-height, 3 ground-level).
+2. Run trials with blindfolded test participants across each feedback mode (minimum 10 trials per mode per participant).
+3. Record time, collisions, and subjective spatial mapping accuracy ratings.
+4. Calculate statistical significance using ANOVA or paired T-tests to determine which algorithm offers the best balance of speed, safety, and cognitive load reduction.
+5. REQUIRED COMPONENTS AND SHOPPING LIST
+
+* Microcontroller: ESP32-S3 Dev Board or Teensy 4.1
+* Distance Sensors: 9x VL53L1X Time-of-Flight sensors
+* I2C Multiplexer: 2x TCA9548A modules
+* Haptic Drivers: 9x DRV2605L breakout boards (or custom MOSFET driver board)
+* Haptic Motors: 9x ERM coin vibration motors (10mm)
+* Power: 3.7V 2500mAh LiPo battery + TP4056 charging board + 5V step-up boost converter
+* Framing: Flexible chest harness/vest, 3D printing filament (PLA/TPU), jumper wires, breadboards/perfboards
