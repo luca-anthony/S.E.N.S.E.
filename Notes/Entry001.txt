@@ -8,4 +8,6 @@ O.R.B.I.T. Optimized Raspberry-Pi Based IoT & Transfer-system
 I do think I prefer P.U.L.S.E.
 I think it sounds better and does describe the project better as a whole.
 
-As for roles we have decidied that I will be Lead Scientist, Lead Computer Scientist/Engineer
+As for roles, we have decided that I will be Lead Scientist and Lead Computer Scientist/Engineer, Kumar will be Lead Engineer and 3D Modeler, and Ty will be Assistant Engineer, Assistant 3D Modeler, and Lead Visionary.
+
+For coding I have decided to use Python since we are 
