@@ -1,1 +1,11 @@
+I have been thinking of what to call this project, and I think I have two names.
+I wanted to do an acronym, something that would maybe sound futuristic but still good.
+Here are the two names:
 
+P.U.L.S.E. Printing, Utility, & Local Smart Ecosystem
+O.R.B.I.T. Optimized Raspberry-Pi Based IoT & Transfer-system
+
+I do think I prefer P.U.L.S.E.
+I think it sounds better and does describe the project better as a whole.
+
+As for roles we have decidied that I will be Lead Scientist, Lead Computer Scientist/Engineer
