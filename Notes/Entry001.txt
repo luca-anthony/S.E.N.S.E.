@@ -10,4 +10,11 @@ I think it sounds better and does describe the project better as a whole.
 
 As for roles, we have decided that I will be Lead Scientist and Lead Computer Scientist/Engineer, Kumar will be Lead Engineer and 3D Modeler, and Ty will be Assistant Engineer, Assistant 3D Modeler, and Lead Visionary.
 
-For coding I have decided to use Python since we are 
+For coding, I have decided to use Python since we are using the Raspberry Pi.
+C or C++ would have been other options if I changed the interface or the OS but I decided against it since I am more familiar with Python and it would be easier for the other members to learn.
+
+We are still working on getting everything decided but I do think this is a very good idea. 
+
+I do hope we are able to complete this.
+
+- Lou A. Lead Scientist and Lead Computer Scientist/Engineer
