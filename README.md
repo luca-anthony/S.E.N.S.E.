@@ -20,4 +20,4 @@ To make the world a brighter place.
 
 Lou O. Anthony - Lead Scientist, Lead Computer Scientist, Assistant Engineer\
 Kumar Nandi - Lead Engineer, Lead 3D and Design Modeler\
-Ty L. Garay. - Lead Visionary, Assistant 3D and Design Modeler, Assistant Engineer\
+Ty L. Garay. - Lead Visionary, Assistant 3D and Design Modeler, Assistant Engineer
