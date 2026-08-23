@@ -15,8 +15,8 @@ There are two modes, one for just getting around that has a greater threshold or
 
 We truly hope to help somebody with this and it would be amazing if we could.
 
-We are ENLIGHTEN.\
-To make the world a brighter place.
+This is ENLIGHTEN.\
+To bring light to the world.
 
 Lou O. Anthony - Lead Scientist, Lead Computer Scientist, Assistant Engineer\
 Kumar Nandi - Lead Engineer, Lead 3D and Design Modeler\
