@@ -1,0 +1,5 @@
+[Read Flex Sensors] --- Is Hand Flat? (Var F)
+F ---> NO ---> [Motors Off]
+F ---> YES ---> [Read Distance Sensor] --- Is Object < Threshold? (Var T)
+T --->  NO ---> [Motors Off]
+T ---> YES ---> [Motors On (Vibration)]
