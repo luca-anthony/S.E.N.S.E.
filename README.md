@@ -19,5 +19,5 @@ This is ENLIGHTEN.\
 To bring light to the world.
 
 Lou O. Anthony - Lead Scientist, Lead Computer Scientist, Assistant Engineer\
-Kumar Nandi - Lead Engineer, Lead 3D and Design Modeler\
+Kumar Nandi - Lead Engineer, Lead 3D and Design Modeler, assistant computer scientist\
 Ty L. Garay. - Lead Visionary, Assistant 3D and Design Modeler, Assistant Engineer
