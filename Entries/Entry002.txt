@@ -14,4 +14,4 @@ The raspberry Pi can be placed like on the wrist or back and the acelerometer al
 I see countless people who are visually impaired and defintetly need something like this. \
 My goal is to help people with their disabilities in the best way possible. \
 
--Lead 3D modeler, Lead engineer, assistant computer scientist. Kumar N.
+Lead 3D modeler, Lead engineer, assistant computer scientist-Kumar N.
