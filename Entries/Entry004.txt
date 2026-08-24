@@ -1,0 +1,37 @@
+  Topic question or should I say "topic questions", How do we test the glove? 
+What environment would the person be in when testing?
+Who would be testing? 
+Where would it be tested? 
+All of these questions need to be answered in order to test our glove. 
+  My idea is to create an environment where the person using the glove doesn't know anything about.
+They also need to be in a blindfold and have earplugs or earmuffs.
+This is to prevent any senses from being used in the situation. 
+Just using vibrations to create the layout for the person to follow in the environment. 
+
+Idea #1
+  We can use multiple different environments to test the reliability of the glove. 
+This means that we can have a person wear the glove in a variety of environments.
+This includes the city, at home or even in nature.
+
+How to test
+  We need the person to be visually impaired. This means a blindfold.
+We also need to make sure that other senses like hearing don't affect the person.
+We need to put the person in multiple environments to make sure that they don't have the layout memorized.
+The idea is to test the glove in multiple environments so the person memorizing the layout is less likely.
+
+Idea #2
+  We can place a person in a controlled environment like a home or apartment.
+This allows us to precisely control the environment. 
+We can use the blindfold and ear plugs but we have to make sure the person can't memorize the layout. 
+But for this test we can make the person do things like picking things up or interacting with the objects in the room.
+
+How to test
+
+  We can use the same blindfold technique and earplugs.
+We can make the person do specific tasks like picking things up or assembling things. 
+
+Consequences of each idea.
+With Idea #1 we can't exactly do specific tasks like picking things up and are just limited to walking. 
+With Idea #2 we can measure both walking and running. However we are limited by our sensors range being too big.
+
+Kumar N. -Lead 3d modeler, lead engineer, assistant computer scientist.
