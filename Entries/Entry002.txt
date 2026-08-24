@@ -1,0 +1,17 @@
+  My idea is to use the technology that is used in the taptic engine on iphones and put them on certain places around the body. \
+One in the wrist one in the shoulder, back, head, and ankles. \
+We can use the Lidar sensor and a radar sensor. \
+My conclusion is that LIDAR sensors can be very precise but they don't go very far. \
+RADAR sensors are not as precise but they can see far away.\
+We can use a RADAR sensor on the top of the head and a LIDAR sensor on the wrist.\
+The RADAR sensor can give the full picture that lasers can't. \
+Another idea is to let it run off a 9V battery or be chargeable. \
+We most likely can also incorporate an acelerometer and a gyroscope for balance detection.\
+The Raspberry Pi 3b might be the best to use because of price. \
+The raspberry Pi can be placed like on the wrist or back and the acelerometer along with the gyroscope on the back. \
+
+  This an be used to help the visually impaired people and in my surroundings.\
+I see countless people who are visually impaired and defintetly need something like this. \
+My goal is to help people with their disabilities in the best way possible. \
+
+-Lead 3D modeler, Lead engineer, assistant computer scientist. Kumar N.
