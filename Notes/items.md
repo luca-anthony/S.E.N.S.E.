@@ -6,4 +6,5 @@ VL53L0X<sup>[2]</sup>\
 
 <a href="https://www.amazon.com/dp/B0B94JZ2YF?ref=clp_hp_h_pc&th=1">Microcontroller<sup>[1]</sup></a>\
 <a href="https://www.amazon.com/dp/B071DW8M8V?lv=shuf&channelId=500&plpRedirect=mhFallback">Distance Sensors<sup>[2]</sup>\
-<a href="https://www.infineon.com/part/BGT60TR13C">Radar sensor</a>
+<a href="https://www.infineon.com/part/BGT60TR13C">Radar sensor</a>\
+<a href="https://estore.st.com/en/products/imaging-and-photonics-solutions/time-of-flight-sensors/vl53l8cx.html">LiDAR sensor</a>
