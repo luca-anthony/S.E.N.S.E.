@@ -1,0 +1,21 @@
+How can we design the Ring band on the wrist?
+
+Design requirements:
+Adjustable grip like a watchband.
+Removable battery cover. 
+Small size.
+Space inside for the electronics
+Simple M4x5 screws
+all 3D printed. 
+
+Where so we design it?
+I will be using CAD.a 
+I say this because we need to work on precise geometry and equations.
+For the program we will use Fusion360. 
+
+We need to be able to 3D print the whole thing. 
+This is because injection molding is expensive.
+We will be using ASA, No fiber reinforced.
+As for the parts that directly touch the skin,
+we can use TPU soft 80A TPU
+
