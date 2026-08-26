@@ -9,7 +9,7 @@ Simple M4x5 screws
 all 3D printed. 
 
 Where so we design it?
-I will be using CAD.a 
+I will be using CAD.
 I say this because we need to work on precise geometry and equations.
 For the program we will use Fusion360. 
 
