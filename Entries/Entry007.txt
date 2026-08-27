@@ -17,6 +17,6 @@ We need to be able to 3D print the whole thing.
 This is because injection molding is expensive.
 We will be using ASA, No fiber reinforced.
 As for the parts that directly touch the skin,
-we can use TPU soft 80A TPU
+we can use TPU soft 90A TPU
 
 Kumar N. -Lead 3d modeler, lead engineer, assistant computer scientist.
