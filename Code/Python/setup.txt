@@ -1,14 +1,16 @@
-#==================================
-#             COMMANDS
-#==================================
+==================================
+             COMMANDS
+==================================
 
 sudo raspi-config nonint do_i2c 0
 sudo raspi-config nonint do_spi 0
 sudo apt update
-sudo apt install python3-pip python3-smbus i2c-tools
-pip3 install adafruit-circuitpython-vl53l1x
-sudo apt install python3-gpiozero
-sudo apt install python3-gpiozero python3-spidev
+sudo apt install -y python3-pip python3-smbus i2c-tools
+sudo apt install -y python3-gpiozero python3-spidev
+pip3 install adafruit-circuitpython-vl53l1x adafruit-blinka
+sudo apt install -y pigpio python3-pigpio
+sudo systemctl enable pigpiod
+sudo systemctl start pigpiod
 sudo reboot
 
 ==================================
