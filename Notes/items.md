@@ -2,7 +2,7 @@ Seeed Studio XIAO ESP32-C3<sup>[1]</sup>\
 VL53L1X<sup>[2]</sup>\
 2.2" Spectra Symbol Flex Sensors<sup>[3]</sup>\
 1027 Coin Cell Vibration Motor<sup>[4]</sup>\
-2N2222 NPN Transistor(s)<sup>[5]</sup>
+2N2222 NPN Transistor(s)<sup>[5]</sup>\
 1kΩ Resistor<sup>[6]</sup>\
 1N4001 Diode<sup>[7]</sup>
 
