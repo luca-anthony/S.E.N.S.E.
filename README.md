@@ -18,12 +18,6 @@ We truly hope to help somebody with this, and it would be amazing if we could.
 This is S.E.N.S.E.\
 Spatial Echo Navigation & Sensing Equipment
 
-Lou O. Anthony - Lead Scientist, Lead Computer Scientist, Assistant Engineer\
-Kumar Nandi - Lead Engineer, Lead 3D and Design Modeler, Assistant Computer Scientist\
-Ty L. Garay. - Lead Visionary, Assistant 3D and Design Modeler, Assistant Engineer
-
-
-
 <h1>How to Use</h1>
 
 If you want to make this by yourself, should you see this, or if you just want to do something for fun, this is how. 
@@ -37,11 +31,13 @@ cd S.E.N.S.E./Code/Bash && chmod +x setup.sh && ./setup.sh
 
 After insalling everything look in the Code/Python for the config.py file and follow the steps for wiring.
 
-We are ENLIGHTEN. \
-To bring more light to the world. 
+<h1>Contributions and Thanks</h1>
 
-I am Lou O. Anthony, \
-I am Kumar Nandi, \
-I am Ty L. Garay, 
+I am Lou O. Anthony, lead scientist, lead computer scientist, assistant engineer, \
+I am Kumar Nandi, lead engineer, lead 3D and 2D modeler, assistant computer scientist, \
+I am Ty L. Garay, lead visionary, assistant 3D and 2D modeler, assistant engineer,
 
 And from the bottom of our hearts, <i>thank you.</i>
+
+We are ENLIGHTEN. \
+To bring more light to the world. 
