@@ -1,4 +1,4 @@
-<h6>ABSTRACT:</h6>
+<h1>ABSTRACT:</h1>
 
 We are a group of middle school scientists trying our best to make life easier for all kinds of people.\
 With this specific idea we are trying to help blind people or people with heavy visual impairment.
@@ -24,7 +24,7 @@ Ty L. Garay. - Lead Visionary, Assistant 3D and Design Modeler, Assistant Engine
 
 
 
-<h6>How to Use</h6>
+<h1>How to Use</h1>
 If you want to make this by yourself, should you see this, or if you just want to do something for fun, this is how.
 
 Command for Pi: \
