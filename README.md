@@ -33,3 +33,12 @@ git clone https://github.com/luca-anthony/S.E.N.S.E./ \
 cd S.E.N.S.E./Code/Bash && chmod +x setup.sh && ./setup.sh \
 
 After insalling everything look in the Code/Python for the config.py file and follow the steps for wiring.
+
+We are ENLIGHTEN. \
+To bring more light to the world. 
+
+I am Lou O. Anthony, \
+I am Kumar Nandi, \
+I am Ty Garay, 
+
+And from the bottom of our hearts, <i>thank you.</i>
