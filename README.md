@@ -1,4 +1,4 @@
-ABSTRACT:
+<h6>ABSTRACT:</h6>
 
 We are a group of middle school scientists trying our best to make life easier for all kinds of people.\
 With this specific idea we are trying to help blind people or people with heavy visual impairment.
@@ -24,12 +24,12 @@ Ty L. Garay. - Lead Visionary, Assistant 3D and Design Modeler, Assistant Engine
 
 
 
-How to Use:
+<h6>How to Use</h6>
 If you want to make this by yourself, should you see this, or if you just want to do something for fun, this is how.
 
-Command for Pi:
-sudo apt update && sudo apt install git -y
-git clone https://github.com/luca-anthony/S.E.N.S.E./
-cd S.E.N.S.E./Code/Bash && chmod +x setup.sh && ./setup.sh
+Command for Pi: \
+sudo apt update && sudo apt install git -y \
+git clone https://github.com/luca-anthony/S.E.N.S.E./ \
+cd S.E.N.S.E./Code/Bash && chmod +x setup.sh && ./setup.sh \
 
 After insalling everything look in the Code/Python for the config.py file and follow the steps for wiring.
