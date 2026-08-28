@@ -22,7 +22,7 @@ Spatial Echo Navigation & Sensing Equipment
 
 If you want to make this by yourself, should you see this, or if you just want to do something for fun, this is how. 
 
-
+<h4>For Raspberry Pi Zero 2 W</h4>
 Commands for Pi: 
 
 sudo apt update && sudo apt install git -y \
