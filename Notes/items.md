@@ -4,6 +4,7 @@ VL53L1X<sup>[2]</sup>\
 1027 Coin Cell Vibration Motor<sup>[4]</sup>\
 2N2222 NPN Transistor(s)<sup>[5]</sup>\
 1kΩ Resistor<sup>[6]</sup>\
+LSM6DS3TR-C IMU unit<sup>[7]</sup>\
 1N4001 Diode<sup>[7]</sup>\
 Raspberry Pi Zero 2 W<sup>[8]</sup>\
 Sunlu TPU 95A Filament<sup>[9]</sup>\
