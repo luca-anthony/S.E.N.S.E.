@@ -39,6 +39,6 @@ To bring more light to the world.
 
 I am Lou O. Anthony, \
 I am Kumar Nandi, \
-I am Ty Garay, 
+I am Ty L. Garay, 
 
 And from the bottom of our hearts, <i>thank you.</i>
