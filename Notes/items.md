@@ -13,7 +13,7 @@ Sunlu ASA Filament<sup>[10]</sup>
 <a href="https://www.st.com/en/imaging-and-photonics-solutions/vl53l1x.htmlhttps://www.st.com/en/imaging-and-photonics-solutions/vl53l1x.html">Distance Sensors<sup>[2]</sup>\
 <a href="https://store.spectrasymbol.com/products/flex-sensor?variant=40666458521715">2.2" Spectra Symbol Flex Sensors<sup>[3]</sup><la>\
 <a href="https://www.amazon.com/dp/B0993GDD7N?ref=clp_hp_h_pc&th=1">1027 Coin Cell Vibration Motor<sup>[4]</sup></a>\
-<a href="https://www.amazon.com/EC-Buying-HLK-LD2410-Presence-Millimeter/dp/B0BXDLHHH2">Radar sensor</a>\
+<a href="https://www.amazon.com/EC-Buying-HLK-LD2410-Presence-Millimeter/dp/B0BXDLHHH2">HLK-LD2410 Radar sensor<sup>[7]</sup></a>\
 <a href="https://www.st.com/en/mems-and-sensors/lsm6ds3tr-c.html">IMU unit</a>\
 <a href="https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/">Raspberry Pi Zero 2 W<sup>[8]</sup></a>\
 <a href="https://www.amazon.com/SUNLU-TPU-Filament-1-75mm-Flexible/dp/B0BXNWK6NS?th=1">Sunlu TPU 95A filament<sup>[9]</sup></a>\
