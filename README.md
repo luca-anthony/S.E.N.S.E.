@@ -1,4 +1,4 @@
-<h1>ABSTRACT:</h1>
+<h1>ABSTRACT</h1>
 
 We are a group of middle school scientists trying our best to make life easier for all kinds of people.\
 With this specific idea we are trying to help blind people or people with heavy visual impairment.
