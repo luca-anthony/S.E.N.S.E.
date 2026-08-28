@@ -25,7 +25,8 @@ Ty L. Garay. - Lead Visionary, Assistant 3D and Design Modeler, Assistant Engine
 
 
 <h1>How to Use</h1>
-If you want to make this by yourself, should you see this, or if you just want to do something for fun, this is how. \
+If you want to make this by yourself, should you see this, or if you just want to do something for fun, this is how. 
+
 
 Commands for Pi: 
 
