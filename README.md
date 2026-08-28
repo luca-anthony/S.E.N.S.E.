@@ -5,7 +5,7 @@ With this specific idea we are trying to help blind people or people with heavy 
 
 With this idea our goal is to make it easier for this demographic to do things and not do things. Allow us to explain.
 
-What this device does is that when your hand is fully extended, it turns on and, through sensors on the palm of the glove, starts measuring the distance between your hand and an object or thing near you.\
+What this device does is that when your hand is fully extended, it turns on, and through sensors on the palm of the glove, starts measuring the distance between your hand and an object or thing near you.\
 If it is within a certain threshold, it will start to vibrate.
 
 The reason we wanted to make this is that a lot of blind people struggle with getting around or even just reaching for things without knocking them over.\
