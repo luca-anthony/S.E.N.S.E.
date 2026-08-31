@@ -1,0 +1,2 @@
+XIAO ESP32 C3 - 21mm x 17.8mm
+Raspberry Pi Zero 2 W - 65mm x 30mm x 5mm
