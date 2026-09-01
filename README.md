@@ -33,9 +33,9 @@ After insalling everything look in the Code/Python for the config.py file and fo
 
 <h1>Contributions and Thanks</h1>
 
-I am Lou O. Anthony, lead scientist, lead computer scientist, assistant engineer, \
-I am Kumar Nandi, lead engineer, lead 3D and 2D modeler, assistant computer scientist, \
-I am Ty L. Garay, lead visionary, assistant 3D and 2D modeler, assistant engineer,
+Lou O. Anthony, lead scientist, lead computer scientist, assistant engineer, \
+Kumar Nandi, lead engineer, lead 3D and 2D modeler, assistant computer scientist, \
+Ty L. Garay, lead visionary, assistant 3D and 2D modeler, assistant engineer,
 
 And from the bottom of our hearts, <i>thank you.</i>
 
