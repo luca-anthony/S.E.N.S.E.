@@ -50,3 +50,6 @@ Below is the link to the Science Fair Submission Form: \
 <a href="https://docs.google.com/document/d/1CFBRvUg9vLzjQzCuhzTcyJ6CodzclPNGb9Yas1JmrjE/edit?pli=1&tab=t.0">Document</a>
 
 
+
+<h5>Buy Us a Coffee!</h5>
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/H2H51P5AZ2)
