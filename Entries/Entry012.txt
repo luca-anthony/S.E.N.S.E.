@@ -1,0 +1,63 @@
+Everything is going well.
+We are actually starting to make good progress.
+We started modeling, all of the code is ready for the first prototype.
+We also finally figured out how to use schematics...
+
+When LHS checked out our current progress they seemed really interested,
+that gives me a lot of hope.
+
+We did decide to go with IMU instead of flex sensors.
+It lowers the cost greatly and we would only need two.
+Props to Kumar, you did a hell of a good job with that idea.
+
+I can't wait 'til we have our first physical prototype.
+As of right now everything is still purely hypothetical or made up of theories.
+I'm not even sure if the math was right for considering the magnetic fields.
+(Props to Spider-Man for reminding me that they are something to worry about..)
+
+It's so crazy to me.
+I mean I'm a very intelligent person.
+I know that, and I've strived so hard to reach a point where I could say that.
+But this.
+S.E.N.S.E.
+This is my time.
+I'm working with a team.
+I finally have a chance to prove I can put my skills to good use besides ALAPSEA.
+
+I don't know what it's like for Kumar and Ty.
+But I'm so excited to do this.
+
+Whether we face failiure or not.
+Whether our idea is even worth anything.
+I know I tried.
+Because even now just at this pooint I've put hours into this project.
+All of the coding and the math.
+It's all so amazing to me.
+
+Our topic, method, materials, and methods are all prepared.
+Although evidently our materials may change.
+
+Something else we decided was to do a series of drafts of small sections of the research paper.
+I think it would make it easier and also help keep our memories good.
+Even with these entries, recording everything in a formal way could be inconsistent. 
+It would be good to just be able to make a summary of everything for the final paper.
+
+I like where this is going. 
+I LOVE where this is going.
+
+I have a lot of faith in us and this project.
+Let's do it.
+
+Not only are both of you my best friends, but now my partners in something that possibly could help people.
+Three siblings.
+My big brother, my little brother and me, the little depends on the day.
+I love you.
+Both of you.
+Kumar and Ty.
+Forever and always.
+Te amo.
+Muac.
+
+
+
+Lou O. Anthony - Lead Scientist, Lead Computer scientist, Assistant Engineer
