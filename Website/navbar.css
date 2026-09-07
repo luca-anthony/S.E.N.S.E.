@@ -1,0 +1,148 @@
+/* =========================================================
+   S.E.N.S.E. — Shared Navbar
+   This file is linked from every page so the navbar always
+   looks and behaves the same, no matter which page you're on.
+   Colors are pulled from the logo (assets/logo.png) so the
+   nav matches the brand.
+   ========================================================= */
+
+:root {
+    --sense-navy-dark: #03152a;
+    --sense-navy: #0a2038;
+    --sense-navy-light: #12304f;
+    --sense-line: #4c6b8a;      /* the thin circle line color from the logo */
+    --sense-accent: #04AA6D;    /* hover / active accent */
+    --sense-text: #eef2f7;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 32px;
+    z-index: 1000;
+
+    background: linear-gradient(180deg, var(--sense-navy) 0%, var(--sense-navy-dark) 100%);
+    border-bottom: 1px solid var(--sense-navy-light);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+
+/* Logo + wordmark */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--sense-text);
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.nav-logo img {
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    display: block;
+}
+
+.nav-logo p {
+    margin: 0;
+}
+
+/* Links */
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 8px;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    position: relative;
+    display: inline-block;
+    color: #c7d2e0;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: color 0.25s ease, background-color 0.25s ease;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.06);
+}
+
+/* Underline that grows in from the center on hover */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 4px;
+    width: 0%;
+    height: 2px;
+    background-color: var(--sense-accent);
+    transition: width 0.25s ease, left 0.25s ease;
+}
+
+.nav-links a:hover::after {
+    width: calc(100% - 28px);
+    left: 14px;
+}
+
+/* Current page indicator — set automatically by navbar.js,
+   or you can add class="active" to a link by hand. */
+.nav-links a.active {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.nav-links a.active::after {
+    width: calc(100% - 28px);
+    left: 14px;
+    background-color: var(--sense-accent);
+}
+
+/* The page's own <h1> title that used to sit above the navbar
+   is hidden — the navbar already shows the S.E.N.S.E. name,
+   so we don't need it twice stacked on top of the fixed bar. */
+header > h1 {
+    position: absolute;
+    left: -9999px;
+}
+
+/* Push page content down so the fixed navbar never overlaps it */
+body {
+    padding-top: 64px;
+}
+
+/* Small screens: stack the logo above the links so nothing
+   gets crushed on a phone. */
+@media (max-width: 640px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 12px 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+
+    body {
+        padding-top: 108px;
+    }
+}
