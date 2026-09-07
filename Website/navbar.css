@@ -1,18 +1,25 @@
 /* =========================================================
-   S.E.N.S.E. — Shared Navbar
+   S.E.N.S.E. — Shared Navbar (Undertale Theme)
    This file is linked from every page so the navbar always
    looks and behaves the same, no matter which page you're on.
-   Colors are pulled from the logo (assets/logo.png) so the
-   nav matches the brand.
+   Colors inspired by Undertale's battle interface.
    ========================================================= */
 
 :root {
-    --sense-navy-dark: #03152a;
-    --sense-navy: #0a2038;
-    --sense-navy-light: #12304f;
-    --sense-line: #4c6b8a;      /* the thin circle line color from the logo */
-    --sense-accent: #04AA6D;    /* hover / active accent */
-    --sense-text: #eef2f7;
+    --ut-black: #000000;
+    --ut-dark-gray: #1a1a1a;
+    --ut-gray: #2b2b2b;
+    --ut-light-gray: #3d3d3d;
+    --ut-white: #ffffff;
+    --ut-yellow: #ffff00;
+    --ut-gold: #ffd700;
+    --ut-red: #ff2323;
+    --ut-dark-red: #8b0000;
+    --ut-blue: #00ffff;
+    --ut-dark-blue: #008080;
+    --ut-green: #00ff00;
+    --ut-orange: #ff8c00;
+    --ut-purple: #bf00ff;
 }
 
 .navbar {
@@ -26,31 +33,45 @@
     padding: 12px 32px;
     z-index: 1000;
 
-    background: linear-gradient(180deg, var(--sense-navy) 0%, var(--sense-navy-dark) 100%);
-    border-bottom: 1px solid var(--sense-navy-light);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+    background: linear-gradient(180deg, var(--ut-black) 0%, var(--ut-dark-gray) 100%);
+    border-bottom: 3px solid var(--ut-yellow);
+    box-shadow: 
+        0 4px 16px rgba(0, 0, 0, 0.5),
+        inset 0 -3px 0 var(--ut-yellow);
 }
 
 /* Logo + wordmark */
 .nav-logo {
     display: flex;
     align-items: center;
-    gap: 10px;
-    color: var(--sense-text);
-    font-size: 18px;
+    gap: 12px;
+    color: var(--ut-yellow);
+    font-size: 20px;
     font-weight: 700;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
+    font-family: 'Determination', sans-serif;
+    text-shadow: 
+        0 0 4px rgba(255, 215, 0, 0.8),
+        0 0 8px rgba(255, 215, 0, 0.5);
 }
 
 .nav-logo img {
-    height: 34px;
-    width: 34px;
+    height: 38px;
+    width: 38px;
     border-radius: 50%;
-    display: block;
+    border: 2px solid var(--ut-yellow);
+    box-shadow: 0 0 12px rgba(255, 215, 0, 0.6);
+    animation: logo-pulse 3s ease-in-out infinite;
+}
+
+@keyframes logo-pulse {
+    0%, 100% { box-shadow: 0 0 12px rgba(255, 215, 0, 0.6); }
+    50% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.9), 0 0 30px rgba(255, 215, 0, 0.5); }
 }
 
 .nav-logo p {
     margin: 0;
+    text-transform: uppercase;
 }
 
 /* Links */
@@ -58,7 +79,7 @@
     display: flex;
     align-items: center;
     list-style: none;
-    gap: 8px;
+    gap: 4px;
 }
 
 .nav-links li {
@@ -68,55 +89,82 @@
 .nav-links a {
     position: relative;
     display: inline-block;
-    color: #c7d2e0;
+    color: var(--ut-white);
     text-decoration: none;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 600;
-    letter-spacing: 1.2px;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
-    padding: 8px 14px;
-    border-radius: 6px;
-    transition: color 0.25s ease, background-color 0.25s ease;
+    padding: 10px 16px;
+    border-radius: 0;
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
+    font-family: 'Determination', sans-serif;
+    background: transparent;
 }
 
 .nav-links a:hover {
-    color: #ffffff;
-    background-color: rgba(255, 255, 255, 0.06);
+    color: var(--ut-black);
+    background: var(--ut-yellow);
+    border-color: var(--ut-yellow);
+    box-shadow: 0 0 16px rgba(255, 215, 0, 0.6);
+    transform: translateY(-1px);
 }
 
-/* Underline that grows in from the center on hover */
+/* Active page indicator */
+.nav-links a.active {
+    color: var(--ut-black);
+    background: var(--ut-yellow);
+    border-color: var(--ut-yellow);
+    box-shadow: 
+        0 0 12px rgba(255, 215, 0, 0.5),
+        inset 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links a.active::before {
+    content: "▶ ";
+    color: var(--ut-red);
+    animation: arrow-blink 1s steps(2, start) infinite;
+}
+
+@keyframes arrow-blink {
+    to { opacity: 0; }
+}
+
+/* Battle menu style corners on hover */
+.nav-links a::before,
 .nav-links a::after {
     content: "";
     position: absolute;
-    left: 50%;
-    bottom: 4px;
-    width: 0%;
-    height: 2px;
-    background-color: var(--sense-accent);
-    transition: width 0.25s ease, left 0.25s ease;
+    width: 8px;
+    height: 8px;
+    border: 2px solid var(--ut-yellow);
+    opacity: 0;
+    transition: opacity 0.2s ease;
 }
 
-.nav-links a:hover::after {
-    width: calc(100% - 28px);
-    left: 14px;
+.nav-links a::before {
+    top: -2px;
+    left: -2px;
+    border-right: none;
+    border-bottom: none;
 }
 
-/* Current page indicator — set automatically by navbar.js,
-   or you can add class="active" to a link by hand. */
-.nav-links a.active {
-    color: #ffffff;
-    background-color: rgba(255, 255, 255, 0.08);
+.nav-links a::after {
+    bottom: -2px;
+    right: -2px;
+    border-left: none;
+    border-top: none;
 }
 
+.nav-links a:hover::before,
+.nav-links a:hover::after,
+.nav-links a.active::before,
 .nav-links a.active::after {
-    width: calc(100% - 28px);
-    left: 14px;
-    background-color: var(--sense-accent);
+    opacity: 1;
 }
 
-/* The page's own <h1> title that used to sit above the navbar
-   is hidden — the navbar already shows the S.E.N.S.E. name,
-   so we don't need it twice stacked on top of the fixed bar. */
+/* Hide the page's own <h1> title */
 header > h1 {
     position: absolute;
     left: -9999px;
@@ -124,11 +172,10 @@ header > h1 {
 
 /* Push page content down so the fixed navbar never overlaps it */
 body {
-    padding-top: 64px;
+    padding-top: 72px;
 }
 
-/* Small screens: stack the logo above the links so nothing
-   gets crushed on a phone. */
+/* Small screens: stack the logo above the links */
 @media (max-width: 640px) {
     .navbar {
         flex-direction: column;
@@ -142,7 +189,12 @@ body {
         gap: 4px;
     }
 
+    .nav-links a {
+        padding: 8px 12px;
+        font-size: 11px;
+    }
+
     body {
-        padding-top: 108px;
+        padding-top: 120px;
     }
 }

@@ -1,16 +1,3 @@
-// =========================================================
-// S.E.N.S.E. — background lyrics renderer
-// =========================================================
-// This script is generic — it just looks for a global
-// `determinationLyrics` array (defined in lyrics-data.js)
-// and a `#lyricsBg` container in the page, and builds the
-// faded background text from them. It also fades each line
-// in/out as it scrolls through view.
-//
-// You should not need to edit this file. Edit lyrics-data.js
-// instead to change the words/colors.
-// =========================================================
-
 document.addEventListener("DOMContentLoaded", function () {
     var container = document.getElementById("lyricsBg");
 
