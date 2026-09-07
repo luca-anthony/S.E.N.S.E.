@@ -1,30 +1,105 @@
+
 /* Navbar styling now lives in navbar.css, shared by every page. */
 
-@font-face {
-    font-family: 'Determination';
-    src: url('assets/determination.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+@font-face { font-family:'Determination'; src:url('assets/determination.ttf') format('truetype'); font-weight:normal; font-style:normal; font-display:swap; }
+
+*{margin:0;padding:0;box-sizing:border-box;} body{font-family:Arial,sans-serif;}
+
+:root {
+    --ut-black:#000000; --ut-dark-gray:#1a1a1a; --ut-gray:#2b2b2b; --ut-light-gray:#3d3d3d; --ut-white:#ffffff;
+    /* The 7 SOULs - Accurate Undertale Colors */
+    --soul-red:#FF0000; --soul-cyan:#00FFFF; --soul-orange:#FFA500; --soul-blue:#0000FF;
+    --soul-purple:#AA00FF; --soul-green:#00FF00; --soul-yellow:#FFFF00;
+    --soul-red-glow:rgba(255,0,0,0.7); --soul-cyan-glow:rgba(0,255,255,0.7);
+    --soul-orange-glow:rgba(255,165,0,0.7); --soul-blue-glow:rgba(0,0,255,0.7);
+    --soul-purple-glow:rgba(170,0,255,0.7); --soul-green-glow:rgba(0,255,0,0.7);
+    --soul-yellow-glow:rgba(255,255,0,0.7);
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+body.home-page{background:#050505;color:#fff;min-height:100vh;}
+body.home-page::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(circle at 30% 20%,var(--soul-yellow-glow),transparent 45%),radial-gradient(circle at 70% 80%,var(--soul-red-glow),transparent 45%);}
 
-body {
-    font-family: Arial, sans-serif;
-}
+.home-content{max-width:900px;margin:0 auto;padding:40px 20px 60px;}
+.section{margin-bottom:50px;}.section:last-of-type{margin-bottom:0;}
 
-.content {
-    margin-top: 20px;
-    padding: 20px;
-}
+.section-title{font-family:'Determination',sans-serif;font-size:28px;letter-spacing:3px;color:var(--soul-yellow);text-shadow:0 0 6px var(--soul-yellow-glow),0 0 16px var(--soul-yellow-glow),0 0 30px var(--soul-yellow-glow);text-align:center;margin-bottom:24px;position:relative;}
+.section-title::before,.section-title::after{content:"";position:absolute;top:50%;width:60px;height:2px;background:linear-gradient(90deg,var(--soul-cyan),var(--soul-blue),var(--soul-purple),var(--soul-red),var(--soul-orange),var(--soul-yellow),var(--soul-green));}
+.section-title::before{left:0;transform:translateY(-50%);}
+.section-title::after{right:0;transform:translateY(-50%);background:linear-gradient(90deg,var(--soul-green),var(--soul-yellow),var(--soul-orange),var(--soul-red),var(--soul-purple),var(--soul-blue),var(--soul-cyan));}
 
-.content-text002 {
-    font-family: 'Determination', sans-serif;
-    font-size: 28px;
-    margin-bottom: 15px;
-}
+.section-body{text-align:center;}
+.section-body p{font-family:'Determination',sans-serif;font-size:16px;line-height:2;color:#ccc;margin-bottom:16px;max-width:700px;margin-left:auto;margin-right:auto;}
+.section-body p:last-child{margin-bottom:0;}
+.section-body b{color:var(--soul-cyan);text-shadow:0 0 6px var(--soul-cyan-glow);}
+
+.hero{text-align:center;margin-bottom:60px;padding-top:20px;}
+.hero-title{font-family:'Determination',sans-serif;font-size:48px;letter-spacing:5px;color:var(--soul-yellow);text-shadow:0 0 10px var(--soul-yellow-glow),0 0 24px var(--soul-yellow-glow),0 0 44px var(--soul-yellow-glow);animation:hero-pulse 3.5s ease-in-out infinite;margin-bottom:12px;}
+@keyframes hero-pulse{0%,100%{opacity:1;text-shadow:0 0 10px var(--soul-yellow-glow),0 0 24px var(--soul-yellow-glow),0 0 44px var(--soul-yellow-glow);}50%{opacity:0.92;text-shadow:0 0 14px var(--soul-yellow-glow),0 0 32px var(--soul-yellow-glow),0 0 54px var(--soul-yellow-glow);}}
+.hero-subtitle{font-family:'Determination',sans-serif;font-size:18px;letter-spacing:4px;color:var(--soul-cyan);text-shadow:0 0 8px var(--soul-cyan-glow);text-transform:uppercase;}
+
+.feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-top:10px;}
+.feature-card{background:#0d0d0d;border:2px solid #2a2a2a;border-radius:8px;padding:28px 24px;text-align:center;transition:all .3s ease;position:relative;overflow:hidden;}
+.feature-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--soul-cyan),var(--soul-blue),var(--soul-purple),var(--soul-red),var(--soul-orange),var(--soul-yellow),var(--soul-green));opacity:0;transition:opacity .3s ease;}
+.feature-card:hover{border-color:var(--soul-cyan);box-shadow:0 0 24px var(--soul-cyan-glow);transform:translateY(-3px);}
+.feature-card:hover::before{opacity:1;}
+/* ALL 7 SOULs on feature card hover */
+.feature-card:nth-child(1):hover{border-color:var(--soul-blue);box-shadow:0 0 24px var(--soul-blue-glow);}
+.feature-card:nth-child(2):hover{border-color:var(--soul-purple);box-shadow:0 0 24px var(--soul-purple-glow);}
+.feature-card:nth-child(3):hover{border-color:var(--soul-green);box-shadow:0 0 24px var(--soul-green-glow);}
+.feature-card:nth-child(4):hover{border-color:var(--soul-cyan);box-shadow:0 0 24px var(--soul-cyan-glow);}
+.feature-card:nth-child(5):hover{border-color:var(--soul-yellow);box-shadow:0 0 24px var(--soul-yellow-glow);}
+.feature-card:nth-child(6):hover{border-color:var(--soul-orange);box-shadow:0 0 24px var(--soul-orange-glow);}
+.feature-card:nth-child(7):hover{border-color:var(--soul-red);box-shadow:0 0 24px var(--soul-red-glow);}
+
+.feature-icon{display:inline-block;font-size:32px;color:var(--soul-cyan);text-shadow:0 0 12px var(--soul-cyan-glow);margin-bottom:16px;animation:icon-float 3s ease-in-out infinite;}
+@keyframes icon-float{0%,100%{transform:translateY(0);}50%{transform:translateY(-4px);}}
+.feature-title{font-family:'Determination',sans-serif;font-size:16px;letter-spacing:2px;color:var(--soul-yellow);text-shadow:0 0 6px var(--soul-yellow-glow);margin-bottom:10px;text-transform:uppercase;}
+.feature-desc{font-family:'Determination',sans-serif;font-size:13px;line-height:1.7;color:#aaa;}
+
+/* Team cards - each gets a SOUL color (all 7 available) */
+.section-team .feature-card:nth-child(1) .feature-icon{color:var(--soul-red);text-shadow:0 0 12px var(--soul-red-glow);}
+.section-team .feature-card:nth-child(2) .feature-icon{color:var(--soul-cyan);text-shadow:0 0 12px var(--soul-cyan-glow);}
+.section-team .feature-card:nth-child(3) .feature-icon{color:var(--soul-orange);text-shadow:0 0 12px var(--soul-orange-glow);}
+.section-team .feature-card:nth-child(4) .feature-icon{color:var(--soul-blue);text-shadow:0 0 12px var(--soul-blue-glow);}
+.section-team .feature-card:nth-child(5) .feature-icon{color:var(--soul-purple);text-shadow:0 0 12px var(--soul-purple-glow);}
+.section-team .feature-card:nth-child(6) .feature-icon{color:var(--soul-green);text-shadow:0 0 12px var(--soul-green-glow);}
+.section-team .feature-card:nth-child(7) .feature-icon{color:var(--soul-yellow);text-shadow:0 0 12px var(--soul-yellow-glow);}
+
+.link-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-top:10px;}
+.link-card{display:flex;flex-direction:column;align-items:center;gap:10px;padding:24px 20px;background:#0d0d0d;border:2px solid #2a2a2a;border-radius:8px;text-decoration:none;transition:all .25s ease;position:relative;overflow:hidden;}
+.link-card::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,var(--soul-cyan-glow),var(--soul-purple-glow));opacity:0;transition:opacity .25s ease;}
+.link-card:hover{transform:translateY(-2px);}.link-card:hover::before{opacity:1;}
+/* ALL 7 SOULs on link card hover */
+.link-card:nth-child(1):hover{border-color:var(--soul-blue);box-shadow:0 0 20px var(--soul-blue-glow);}
+.link-card:nth-child(2):hover{border-color:var(--soul-red);box-shadow:0 0 20px var(--soul-red-glow);}
+.link-card:nth-child(3):hover{border-color:var(--soul-green);box-shadow:0 0 20px var(--soul-green-glow);}
+.link-card:nth-child(4):hover{border-color:var(--soul-orange);box-shadow:0 0 20px var(--soul-orange-glow);}
+.link-card:nth-child(5):hover{border-color:var(--soul-purple);box-shadow:0 0 20px var(--soul-purple-glow);}
+.link-card:nth-child(6):hover{border-color:var(--soul-cyan);box-shadow:0 0 20px var(--soul-cyan-glow);}
+.link-card:nth-child(7):hover{border-color:var(--soul-yellow);box-shadow:0 0 20px var(--soul-yellow-glow);}
+
+.link-icon{font-size:28px;color:var(--soul-yellow);text-shadow:0 0 10px var(--soul-yellow-glow);transition:transform .25s ease;}
+.link-card:hover .link-icon{transform:scale(1.15);}
+.link-card:nth-child(1) .link-icon{color:var(--soul-blue);text-shadow:0 0 10px var(--soul-blue-glow);}
+.link-card:nth-child(2) .link-icon{color:var(--soul-red);text-shadow:0 0 10px var(--soul-red-glow);}
+.link-card:nth-child(3) .link-icon{color:var(--soul-green);text-shadow:0 0 10px var(--soul-green-glow);}
+.link-card:nth-child(4) .link-icon{color:var(--soul-orange);text-shadow:0 0 10px var(--soul-orange-glow);}
+.link-card:nth-child(5) .link-icon{color:var(--soul-purple);text-shadow:0 0 10px var(--soul-purple-glow);}
+.link-card:nth-child(6) .link-icon{color:var(--soul-cyan);text-shadow:0 0 10px var(--soul-cyan-glow);}
+.link-card:nth-child(7) .link-icon{color:var(--soul-yellow);text-shadow:0 0 10px var(--soul-yellow-glow);}
+
+.link-label{font-family:'Determination',sans-serif;font-size:14px;letter-spacing:1.5px;color:#fff;text-transform:uppercase;transition:color .25s ease;}
+.link-card:hover .link-label{text-shadow:0 0 8px;}
+.link-card:nth-child(1):hover .link-label{color:var(--soul-blue);text-shadow:0 0 8px var(--soul-blue-glow);}
+.link-card:nth-child(2):hover .link-label{color:var(--soul-red);text-shadow:0 0 8px var(--soul-red-glow);}
+.link-card:nth-child(3):hover .link-label{color:var(--soul-green);text-shadow:0 0 8px var(--soul-green-glow);}
+.link-card:nth-child(4):hover .link-label{color:var(--soul-orange);text-shadow:0 0 8px var(--soul-orange-glow);}
+.link-card:nth-child(5):hover .link-label{color:var(--soul-purple);text-shadow:0 0 8px var(--soul-purple-glow);}
+.link-card:nth-child(6):hover .link-label{color:var(--soul-cyan);text-shadow:0 0 8px var(--soul-cyan-glow);}
+.link-card:nth-child(7):hover .link-label{color:var(--soul-yellow);text-shadow:0 0 8px var(--soul-yellow-glow);}
+
+.section-footer{text-align:center;padding-top:30px;border-top:1px solid #2a2a2a;}
+.footer-note{font-family:'Determination',sans-serif;font-size:14px;letter-spacing:1px;color:var(--soul-red);font-style:italic;text-shadow:0 0 8px var(--soul-red-glow);animation:footer-blink 2s ease-in-out infinite;}
+@keyframes footer-blink{0%,100%{opacity:1;}50%{opacity:0.6;}}
+
+@media (max-width:640px){.home-content{padding:30px 16px 40px;}.hero-title{font-size:36px;letter-spacing:3px;}.hero-subtitle{font-size:14px;letter-spacing:2px;}.section-title{font-size:22px;letter-spacing:2px;}.section-title::before,.section-title::after{width:40px;}.feature-grid,.link-grid{grid-template-columns:1fr;}}

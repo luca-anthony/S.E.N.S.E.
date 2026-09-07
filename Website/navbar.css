@@ -1,8 +1,6 @@
 /* =========================================================
-   S.E.N.S.E. — Shared Navbar (Undertale Theme)
-   This file is linked from every page so the navbar always
-   looks and behaves the same, no matter which page you're on.
-   Colors inspired by Undertale's battle interface.
+   S.E.N.S.E. — Shared Navbar (Undertale 7 SOULs Theme)
+   Accurate Undertale SOUL colors
    ========================================================= */
 
 :root {
@@ -11,190 +9,66 @@
     --ut-gray: #2b2b2b;
     --ut-light-gray: #3d3d3d;
     --ut-white: #ffffff;
-    --ut-yellow: #ffff00;
-    --ut-gold: #ffd700;
-    --ut-red: #ff2323;
-    --ut-dark-red: #8b0000;
-    --ut-blue: #00ffff;
-    --ut-dark-blue: #008080;
-    --ut-green: #00ff00;
-    --ut-orange: #ff8c00;
-    --ut-purple: #bf00ff;
+
+    /* The 7 SOULs - Accurate Undertale Colors */
+    --soul-red: #FF0000;       /* Determination (Frisk) */
+    --soul-cyan: #00FFFF;      /* Patience */
+    --soul-orange: #FFA500;    /* Bravery */
+    --soul-blue: #0000FF;      /* Integrity */
+    --soul-purple: #AA00FF;    /* Perseverance */
+    --soul-green: #00FF00;     /* Kindness */
+    --soul-yellow: #FFFF00;    /* Justice */
+
+    --soul-red-glow: rgba(255, 0, 0, 0.7);
+    --soul-cyan-glow: rgba(0, 255, 255, 0.7);
+    --soul-orange-glow: rgba(255, 165, 0, 0.7);
+    --soul-blue-glow: rgba(0, 0, 255, 0.7);
+    --soul-purple-glow: rgba(170, 0, 255, 0.7);
+    --soul-green-glow: rgba(0, 255, 0, 0.7);
+    --soul-yellow-glow: rgba(255, 255, 0, 0.7);
 }
 
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 32px;
-    z-index: 1000;
-
+    position: fixed; top: 0; left: 0; width: 100%;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 12px 32px; z-index: 1000;
     background: linear-gradient(180deg, var(--ut-black) 0%, var(--ut-dark-gray) 100%);
-    border-bottom: 3px solid var(--ut-yellow);
-    box-shadow: 
-        0 4px 16px rgba(0, 0, 0, 0.5),
-        inset 0 -3px 0 var(--ut-yellow);
+    border-bottom: 3px solid var(--soul-yellow);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.5), inset 0 -3px 0 var(--soul-yellow);
 }
 
-/* Logo + wordmark */
-.nav-logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    color: var(--ut-yellow);
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    font-family: 'Determination', sans-serif;
-    text-shadow: 
-        0 0 4px rgba(255, 215, 0, 0.8),
-        0 0 8px rgba(255, 215, 0, 0.5);
-}
+.nav-logo { display:flex; align-items:center; gap:12px; color:var(--soul-yellow); font-size:20px; font-weight:700; letter-spacing:3px; font-family:'Determination',sans-serif; text-shadow:0 0 4px var(--soul-yellow-glow),0 0 8px var(--soul-yellow-glow); }
+.nav-logo img { height:38px; width:38px; border-radius:50%; border:2px solid var(--soul-yellow); box-shadow:0 0 12px var(--soul-yellow-glow); animation:logo-pulse 3s ease-in-out infinite; }
+@keyframes logo-pulse { 0%,100%{box-shadow:0 0 12px var(--soul-yellow-glow);} 50%{box-shadow:0 0 20px var(--soul-yellow-glow),0 0 30px var(--soul-yellow-glow);} }
+.nav-logo p { margin:0; text-transform:uppercase; }
 
-.nav-logo img {
-    height: 38px;
-    width: 38px;
-    border-radius: 50%;
-    border: 2px solid var(--ut-yellow);
-    box-shadow: 0 0 12px rgba(255, 215, 0, 0.6);
-    animation: logo-pulse 3s ease-in-out infinite;
-}
+.nav-links { display:flex; align-items:center; list-style:none; gap:4px; }
+.nav-links li { margin:0; }
+.nav-links a { position:relative; display:inline-block; color:var(--ut-white); text-decoration:none; font-size:12px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; padding:10px 16px; border-radius:0; border:2px solid transparent; transition:all 0.2s ease; font-family:'Determination',sans-serif; background:transparent; }
 
-@keyframes logo-pulse {
-    0%, 100% { box-shadow: 0 0 12px rgba(255, 215, 0, 0.6); }
-    50% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.9), 0 0 30px rgba(255, 215, 0, 0.5); }
-}
+/* Home - Justice (Yellow) */
+.nav-links li:nth-child(1) a:hover, .nav-links li:nth-child(1) a.active { color:var(--ut-black); background:var(--soul-yellow); border-color:var(--soul-yellow); box-shadow:0 0 16px var(--soul-yellow-glow); transform:translateY(-1px); }
+/* Code Choice - Integrity (Blue) */
+.nav-links li:nth-child(2) a:hover, .nav-links li:nth-child(2) a.active { color:var(--ut-black); background:var(--soul-blue); border-color:var(--soul-blue); box-shadow:0 0 16px var(--soul-blue-glow); transform:translateY(-1px); }
+/* Contact - Kindness (Green) */
+.nav-links li:nth-child(3) a:hover, .nav-links li:nth-child(3) a.active { color:var(--ut-black); background:var(--soul-green); border-color:var(--soul-green); box-shadow:0 0 16px var(--soul-green-glow); transform:translateY(-1px); }
+/* Determination - Determination (Red) */
+.nav-links li:nth-child(4) a:hover, .nav-links li:nth-child(4) a.active { color:var(--ut-black); background:var(--soul-red); border-color:var(--soul-red); box-shadow:0 0 16px var(--soul-red-glow); transform:translateY(-1px); }
 
-.nav-logo p {
-    margin: 0;
-    text-transform: uppercase;
-}
+.nav-links a.active::before { content:"▶ "; color:var(--soul-red); animation:arrow-blink 1s steps(2,start) infinite; }
+@keyframes arrow-blink { to { opacity:0; } }
 
-/* Links */
-.nav-links {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    gap: 4px;
-}
+.nav-links li:nth-child(1) a::before, .nav-links li:nth-child(1) a::after { border-color:var(--soul-yellow); }
+.nav-links li:nth-child(2) a::before, .nav-links li:nth-child(2) a::after { border-color:var(--soul-blue); }
+.nav-links li:nth-child(3) a::before, .nav-links li:nth-child(3) a::after { border-color:var(--soul-green); }
+.nav-links li:nth-child(4) a::before, .nav-links li:nth-child(4) a::after { border-color:var(--soul-red); }
 
-.nav-links li {
-    margin: 0;
-}
+.nav-links a::before, .nav-links a::after { content:""; position:absolute; width:8px; height:8px; border:2px solid; opacity:0; transition:opacity 0.2s ease; }
+.nav-links a::before { top:-2px; left:-2px; border-right:none; border-bottom:none; }
+.nav-links a::after { bottom:-2px; right:-2px; border-left:none; border-top:none; }
+.nav-links a:hover::before, .nav-links a:hover::after, .nav-links a.active::before, .nav-links a.active::after { opacity:1; }
 
-.nav-links a {
-    position: relative;
-    display: inline-block;
-    color: var(--ut-white);
-    text-decoration: none;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    padding: 10px 16px;
-    border-radius: 0;
-    border: 2px solid transparent;
-    transition: all 0.2s ease;
-    font-family: 'Determination', sans-serif;
-    background: transparent;
-}
+header > h1 { position:absolute; left:-9999px; }
+body { padding-top:72px; }
 
-.nav-links a:hover {
-    color: var(--ut-black);
-    background: var(--ut-yellow);
-    border-color: var(--ut-yellow);
-    box-shadow: 0 0 16px rgba(255, 215, 0, 0.6);
-    transform: translateY(-1px);
-}
-
-/* Active page indicator */
-.nav-links a.active {
-    color: var(--ut-black);
-    background: var(--ut-yellow);
-    border-color: var(--ut-yellow);
-    box-shadow: 
-        0 0 12px rgba(255, 215, 0, 0.5),
-        inset 0 0 20px rgba(0, 0, 0, 0.2);
-}
-
-.nav-links a.active::before {
-    content: "▶ ";
-    color: var(--ut-red);
-    animation: arrow-blink 1s steps(2, start) infinite;
-}
-
-@keyframes arrow-blink {
-    to { opacity: 0; }
-}
-
-/* Battle menu style corners on hover */
-.nav-links a::before,
-.nav-links a::after {
-    content: "";
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    border: 2px solid var(--ut-yellow);
-    opacity: 0;
-    transition: opacity 0.2s ease;
-}
-
-.nav-links a::before {
-    top: -2px;
-    left: -2px;
-    border-right: none;
-    border-bottom: none;
-}
-
-.nav-links a::after {
-    bottom: -2px;
-    right: -2px;
-    border-left: none;
-    border-top: none;
-}
-
-.nav-links a:hover::before,
-.nav-links a:hover::after,
-.nav-links a.active::before,
-.nav-links a.active::after {
-    opacity: 1;
-}
-
-/* Hide the page's own <h1> title */
-header > h1 {
-    position: absolute;
-    left: -9999px;
-}
-
-/* Push page content down so the fixed navbar never overlaps it */
-body {
-    padding-top: 72px;
-}
-
-/* Small screens: stack the logo above the links */
-@media (max-width: 640px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-        padding: 12px 20px;
-    }
-
-    .nav-links {
-        flex-wrap: wrap;
-        gap: 4px;
-    }
-
-    .nav-links a {
-        padding: 8px 12px;
-        font-size: 11px;
-    }
-
-    body {
-        padding-top: 120px;
-    }
-}
+@media (max-width:640px) { .navbar{flex-direction:column;align-items:flex-start;gap:10px;padding:12px 20px;} .nav-links{flex-wrap:wrap;gap:4px;} .nav-links a{padding:8px 12px;font-size:11px;} body{padding-top:120px;} }
