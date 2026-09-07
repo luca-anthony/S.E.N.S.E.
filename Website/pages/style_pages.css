@@ -157,3 +157,72 @@ body.determination-page .content-text002::after {
 @keyframes dtm-blink {
     to { opacity: 0; }
 }
+
+/* =========================================================
+   Background lyrics (filled in by lyrics.js from lyrics-data.js)
+   ========================================================= */
+
+/* Wraps both the faded lyrics layer and the journal entry text,
+   so the lyrics layer stretches to match ONLY the entry's height
+   (not the title/intro above it — that's what was causing the
+   first lyric line to render up near the navbar, above the title). */
+.dtm-lyrics-wrap {
+    position: relative;
+}
+
+.lyrics-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    padding: 20px 24px 60px;
+    pointer-events: none;   /* clicks pass through to the content above */
+    user-select: none;
+}
+
+.content-container {
+    position: relative;
+    z-index: 1;
+}
+
+/* The journal text itself needs its own stacking position so it
+   paints ABOVE the absolutely-positioned .lyrics-bg layer that
+   shares its wrapper — otherwise the background lines would cover
+   the readable entry text instead of sitting behind it. */
+.content-text002 {
+    position: relative;
+    z-index: 1;
+}
+
+.lyrics-line {
+    font-family: 'Determination', sans-serif;
+    font-weight: bold;
+    font-size: clamp(18px, 3.2vw, 34px);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffffff;
+    opacity: 0.16;
+    text-shadow: 0 0 10px currentColor;
+    transition: opacity 1.2s ease;
+}
+
+/* Lines fade brighter as they scroll through the middle of
+   the screen, then fade back down — like the Undertale title. */
+.lyrics-line.in-view {
+    opacity: 0.45;
+}
+
+.lyrics-credit {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    color: rgba(255, 255, 255, 0.35);
+    text-align: center;
+    margin-top: 10px;
+}
