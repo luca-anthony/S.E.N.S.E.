@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S.E.N.S.E. — *But it refused...</title>
+    <link rel="stylesheet" href="../navbar.css">
+    <link rel="stylesheet" href="style_pages.css">
+    <link rel="stylesheet" href="secret_pages.css">
+</head>
+<body class="secret-page refused-page">
+    <header>
+        <h1>S.E.N.S.E.</h1>
+        <nav class="navbar">
+            <div class="nav-logo">
+                <img src="../assets/logo.png" alt="S.E.N.S.E. logo">
+                <p>S.E.N.S.E.</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="code_choice.html">Code Choice</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="determination.html">DETERMINATION</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <audio id="hisTheme" loop preload="auto">
+        <source src="../assets/His Theme.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="secret-container" id="secretContainer">
+        <div class="choice-box" id="choiceBox">
+            <div class="choice-text">* What will you do?</div>
+            <div class="choice-buttons">
+                <button class="ut-btn save-btn" id="saveBtn" type="button">
+                    <span class="ut-btn-text">SAVE</span>
+                </button>
+                <button class="ut-btn exit-btn" id="exitBtn" type="button">
+                    <span class="ut-btn-text">EXIT</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="flying-logo" id="flyingLogo" aria-hidden="true">
+        <div class="flying-sprite" id="flyingLogoSprite">
+            <img src="../assets/heart.png" alt="♥" class="sprite-img" id="flyingLogoImg" onerror="this.classList.add('img-missing')">
+            <div class="css-heart-fallback" aria-hidden="true">♥</div>
+        </div>
+    </div>
+
+    <div class="flying-heart" id="flyingHeart" aria-hidden="true">
+        <div class="flying-sprite" id="flyingHeartSprite">
+            <img src="../assets/heart.png" alt="♥" class="sprite-img" id="flyingHeartImg" onerror="this.classList.add('img-missing')">
+            <div class="css-heart-fallback" aria-hidden="true">♥</div>
+        </div>
+    </div>
+
+    <div class="flash-overlay" id="flashOverlay" aria-hidden="true"></div>
+
+    <script src="../navbar.js"></script>
+    <script src="secret_pages.js"></script>
+</body>
+</html>

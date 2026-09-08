@@ -5,8 +5,13 @@
 :root {
     --ut-black:#000000; --ut-dark-gray:#1a1a1a; --ut-gray:#2b2b2b; --ut-light-gray:#3d3d3d; --ut-white:#ffffff;
     /* The 7 SOULs - Accurate Undertale Colors */
-    --soul-red:#FF0000; --soul-cyan:#00FFFF; --soul-orange:#FFA500; --soul-blue:#0000FF;
-    --soul-purple:#AA00FF; --soul-green:#00FF00; --soul-yellow:#FFFF00;
+    --soul-red:#FF0000;       /* Determination (Frisk) */
+    --soul-cyan:#00FFFF;      /* Patience */
+    --soul-orange:#FFA500;    /* Bravery */
+    --soul-blue:#0000FF;      /* Integrity */
+    --soul-purple:#AA00FF;    /* Perseverance */
+    --soul-green:#00FF00;     /* Kindness */
+    --soul-yellow:#FFFF00;    /* Justice */
     --soul-red-glow:rgba(255,0,0,0.7); --soul-cyan-glow:rgba(0,255,255,0.7);
     --soul-orange-glow:rgba(255,165,0,0.7); --soul-blue-glow:rgba(0,0,255,0.7);
     --soul-purple-glow:rgba(170,0,255,0.7); --soul-green-glow:rgba(0,255,0,0.7);
@@ -23,7 +28,14 @@
 
 /* ===== MUSIC PLAYER BUTTON ===== */
 .music-player { position:fixed; top:85px; right:24px; z-index:999; pointer-events:none; }
-.music-btn { pointer-events:auto; display:inline-flex; align-items:center; gap:10px; padding:12px 20px; background:linear-gradient(135deg,#1a1a1a 0%,#0d0d0d 100%); border:2px solid var(--soul-yellow); border-radius:50px; color:var(--soul-yellow); font-family:'Determination',sans-serif; font-size:12px; letter-spacing:1.5px; text-transform:uppercase; cursor:pointer; transition:all 0.3s ease; box-shadow:0 4px 20px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,0,0.1) inset; position:relative; overflow:hidden; }
+.music-btn {
+    pointer-events:auto; display:inline-flex; align-items:center; gap:10px;
+    padding:12px 20px; background:linear-gradient(135deg,#1a1a1a 0%,#0d0d0d 100%);
+    border:2px solid var(--soul-yellow); border-radius:50px;
+    color:var(--soul-yellow); font-family:'Determination',sans-serif; font-size:12px; letter-spacing:1.5px; text-transform:uppercase;
+    cursor:pointer; transition:all 0.3s ease;
+    box-shadow:0 4px 20px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,0,0.1) inset; position:relative; overflow:hidden;
+}
 .music-btn::before { content:""; position:absolute; inset:0; background:linear-gradient(90deg,var(--soul-red),var(--soul-orange),var(--soul-yellow),var(--soul-green),var(--soul-cyan),var(--soul-blue),var(--soul-purple)); background-size:300% 100%; opacity:0; transition:opacity 0.3s ease; animation:soul-shift 8s linear infinite; }
 @keyframes soul-shift { 0%{background-position:0% 50%;} 100%{background-position:300% 50%;} }
 .music-btn:hover { border-color:var(--soul-red); color:var(--ut-white); transform:translateY(-2px); box-shadow:0 6px 28px rgba(0,0,0,0.6), 0 0 24px var(--soul-red-glow), 0 0 0 1px rgba(255,255,0,0.2) inset; }
@@ -38,7 +50,78 @@
 .music-text { white-space:nowrap; }
 @media (max-width:640px) { .music-player{top:78px;right:12px;left:12px;display:flex;justify-content:center;} .music-btn{padding:10px 16px;font-size:11px;} .music-text{display:none;} .music-btn.playing .music-text{display:inline;} }
 
-/* ===== DETERMINATION PAGE (Red title + Fluctuating ALL 7 SOUL Background) ===== */
+/* ===== SECRET BUTTON (Determination page) ===== */
+.secret-button-container {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid #333;
+    animation: secret-btn-appear 1s ease-out 0.5s both;
+}
+@keyframes secret-btn-appear {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.secret-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 28px;
+    background: linear-gradient(135deg, #1a0000 0%, #0d0000 100%);
+    border: 2px solid var(--soul-red);
+    border-radius: 50px;
+    color: var(--soul-red);
+    font-family: 'Determination', sans-serif;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow:
+        0 4px 20px rgba(0,0,0,0.5),
+        0 0 0 1px rgba(255,0,0,0.1) inset,
+        0 0 20px var(--soul-red-glow);
+    position: relative;
+    overflow: hidden;
+}
+.secret-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,
+        var(--soul-red), var(--soul-orange), var(--soul-yellow),
+        var(--soul-green), var(--soul-cyan), var(--soul-blue), var(--soul-purple)
+    );
+    background-size: 300% 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    animation: soul-shift 8s linear infinite;
+}
+.secret-btn:hover {
+    border-color: var(--soul-yellow);
+    color: var(--ut-black);
+    transform: translateY(-3px);
+    box-shadow:
+        0 6px 28px rgba(0,0,0,0.6),
+        0 0 30px var(--soul-yellow-glow),
+        0 0 0 1px rgba(255,255,0,0.2) inset;
+}
+.secret-btn:hover::before { opacity: 0.2; }
+.secret-btn:active { transform: translateY(-1px) scale(0.98); }
+.secret-btn-text { position: relative; z-index: 1; }
+.secret-btn-arrow {
+    position: relative;
+    z-index: 1;
+    font-size: 16px;
+    animation: arrow-pulse 1.5s ease-in-out infinite;
+}
+@keyframes arrow-pulse {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(4px); }
+}
+
+/* ===== DETERMINATION PAGE (Red + Fluctuating ALL 7 SOUL Background) ===== */
 body.determination-page{background:#000;color:#fff;min-height:100vh;}
 body.determination-page::before{ content:""; position:fixed; inset:0; z-index:-2;
     background:
@@ -71,7 +154,7 @@ body.determination-page .content-text002{color:#fff;font-size:14px;line-height:1
 body.determination-page .content-text002::after{content:"▼";display:block;text-align:right;color:var(--soul-red);margin-top:10px;animation:dtm-blink 1s steps(2,start) infinite;}
 @keyframes dtm-blink{to{opacity:0;}}
 
-/* ===== CODE CHOICE PAGE (Each language = distinct SOUL) ===== */
+/* ===== CODE CHOICE PAGE (All 7 SOULs visible) ===== */
 body.code-choice-page{background:#0a0a0a;color:#fff;min-height:100vh;}
 body.code-choice-page::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(circle at 20% 30%,var(--soul-cyan-glow),transparent 40%),radial-gradient(circle at 80% 70%,var(--soul-purple-glow),transparent 40%);}
 body.code-choice-page .content-container{max-width:1000px;}
@@ -84,11 +167,10 @@ body.code-choice-page .content-text001{color:#ccc;font-size:15px;line-height:1.8
 .language-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--card-accent);opacity:0;transition:opacity .3s ease;}
 .language-card:hover{border-color:var(--card-accent);box-shadow:0 0 20px var(--card-glow);transform:translateY(-2px);}
 .language-card:hover::before{opacity:1;}
-/* Each language gets a distinct SOUL color */
-.language-card.cpp{--card-accent:var(--soul-blue);--card-glow:var(--soul-blue-glow);}       /* C++ = Integrity (Blue) */
-.language-card.c{--card-accent:var(--soul-purple);--card-glow:var(--soul-purple-glow);}    /* C = Perseverance (Purple) */
-.language-card.python{--card-accent:var(--soul-yellow);--card-glow:var(--soul-yellow-glow);}/* Python = Justice (Yellow) */
-.language-card.bash{--card-accent:var(--soul-green);--card-glow:var(--soul-green-glow);}    /* Bash = Kindness (Green) */
+.language-card.cpp{--card-accent:var(--soul-blue);--card-glow:var(--soul-blue-glow);}
+.language-card.c{--card-accent:var(--soul-purple);--card-glow:var(--soul-purple-glow);}
+.language-card.python{--card-accent:var(--soul-yellow);--card-glow:var(--soul-yellow-glow);}
+.language-card.bash{--card-accent:var(--soul-green);--card-glow:var(--soul-green-glow);}
 
 .language-title{font-family:'Determination',sans-serif;font-size:18px;letter-spacing:2px;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid #333;color:var(--card-accent);text-shadow:0 0 8px var(--card-glow);text-transform:uppercase;}
 .file-list{list-style:none;padding:0;margin:0;}
