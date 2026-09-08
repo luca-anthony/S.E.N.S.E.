@@ -51,14 +51,14 @@ body.home-page::before{content:"";position:fixed;inset:0;z-index:-1;background:r
 .feature-card:nth-child(6):hover{border-color:var(--soul-orange);box-shadow:0 0 24px var(--soul-orange-glow);}
 .feature-card:nth-child(7):hover{border-color:var(--soul-red);box-shadow:0 0 24px var(--soul-red-glow);}
 
-.feature-icon{display:inline-block;font-size:32px;color:var(--soul-purple);text-shadow:0 0 12px var(--soul-cyan-glow);margin-bottom:16px;animation:icon-float 3s ease-in-out infinite;}
+.feature-icon{display:inline-block;font-size:32px;color:var(--soul-cyan);text-shadow:0 0 12px var(--soul-cyan-glow);margin-bottom:16px;animation:icon-float 3s ease-in-out infinite;}
 @keyframes icon-float{0%,100%{transform:translateY(0);}50%{transform:translateY(-4px);}}
 .feature-title{font-family:'Determination',sans-serif;font-size:16px;letter-spacing:2px;color:var(--soul-yellow);text-shadow:0 0 6px var(--soul-yellow-glow);margin-bottom:10px;text-transform:uppercase;}
 .feature-desc{font-family:'Determination',sans-serif;font-size:13px;line-height:1.7;color:#aaa;}
 
 /* Team cards - each gets a SOUL color (all 7 available) */
 .section-team .feature-card:nth-child(1) .feature-icon{color:var(--soul-red);text-shadow:0 0 12px var(--soul-red-glow);}
-.section-team .feature-card:nth-child(2) .feature-icon{color:var(--soul-purple);text-shadow:0 0 12px var(--soul-cyan-glow);}
+.section-team .feature-card:nth-child(2) .feature-icon{color:var(--soul-purple);text-shadow:0 0 12px var(--soul-purple-glow);}
 .section-team .feature-card:nth-child(3) .feature-icon{color:var(--soul-orange);text-shadow:0 0 12px var(--soul-orange-glow);}
 .section-team .feature-card:nth-child(4) .feature-icon{color:var(--soul-blue);text-shadow:0 0 12px var(--soul-blue-glow);}
 .section-team .feature-card:nth-child(5) .feature-icon{color:var(--soul-purple);text-shadow:0 0 12px var(--soul-purple-glow);}
