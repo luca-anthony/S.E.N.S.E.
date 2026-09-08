@@ -265,7 +265,11 @@ function initInspirePage() {
             'Because it shows that we work to help each other.',
             'Even if you don\'t help with this project.',
             'Write, draw, help, talk, code, work, model, imagine.',
-            'SAVE THE WORLD.'
+            'SAVE THE WORLD.',
+            'PS: Credit to Toby Fox for icons and music',
+            'PPS: Credit to my amazing brother for being the inspiration to everything',
+            'I Love you.',
+            'LOU MADE THIS BABYYYYYY'
         ];
 
         finalMessage.classList.add('show');
