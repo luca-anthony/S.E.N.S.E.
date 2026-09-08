@@ -8,7 +8,7 @@
 :root {
     --ut-black:#000000; --ut-dark-gray:#1a1a1a; --ut-gray:#2b2b2b; --ut-light-gray:#3d3d3d; --ut-white:#ffffff;
     /* The 7 SOULs - Accurate Undertale Colors */
-    --soul-red:#FF0000; --soul-cyan:#00FFFF; --soul-orange:#FFA500; --soul-blue:#0000FF;
+    --soul-red:#FF0000; --soul-cyan:#00FFFF; --soul-orange:##FCA600; --soul-blue:#0000FF;
     --soul-purple:#AA00FF; --soul-green:#00FF00; --soul-yellow:#FFFF00;
     --soul-red-glow:rgba(255,0,0,0.7); --soul-cyan-glow:rgba(0,255,255,0.7);
     --soul-orange-glow:rgba(255,165,0,0.7); --soul-blue-glow:rgba(0,0,255,0.7);
