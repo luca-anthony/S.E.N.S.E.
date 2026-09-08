@@ -267,9 +267,7 @@ function initInspirePage() {
             'Write, draw, help, talk, code, work, model, imagine.',
             'SAVE THE WORLD.',
             'PS: Credit to Toby Fox for icons and music',
-            'PPS: Credit to my amazing brother for being the inspiration to everything',
-            'I Love you.',
-            'LOU MADE THIS BABYYYYYY'
+            'LOU MADE THIS BABYYYY'
         ];
 
         finalMessage.classList.add('show');
