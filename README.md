@@ -56,4 +56,5 @@ Below is the link to the Science Fair Submission Form: \
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/H2H51P5AZ2)
 
 
-<b>In Loving Memory of Anthony Garay</b>
+<b>In Loving Memory of Anthony Garay</b> \
+<b>You would’ve loved this</b>
