@@ -1,47 +1,52 @@
- ==================================
+==================================
               WIRING
- ==================================
+==================================
+
+----------------------------------
+      POWER & I2C SHARED BUS
+----------------------------------
+* Note: SDA (Pin 3) and SCL (Pin 5) are shared across 
+  the VL53L1X, IMU #1, and IMU #2 in parallel.
 
 ----------------------------------
              VL53L1X
 ----------------------------------
-VCC --> Pin 1/5V/3.3V
-GND --> Pin 9/GND
-SDA --> Pin 3/GPIO2
-SCL --> Pin 5/GPIO3
+VCC --> Pin 1 / 3.3V
+GND --> Pin 9 / GND
+SDA --> Pin 3 / GPIO 2
+SCL --> Pin 5 / GPIO 3
 
 ----------------------------------
-      FLEX SENSOR & MCP3008
+         IMU #1 (Hand Back)
 ----------------------------------
-----MCP3008
-VDD/Pin 16  --> Pin 1/3.3v
-VREF/Pin 15 --> Pin 1/3.3v
-AGND/Pin 14 --> Pin 6/GND
-DGND/Pin 9  --> Pin 6/GND
-CS/SHDN/Pin 10 --> Pin 24/GPIO 8/CE0
-DIN/MOSI/Pin 11 --> Pin 19/GPIO 10/MOSI
-DOUT/MISO/Pin 12 --> Pin 21/GPIO 9/MISO
-CLK/Pin 13  --> Pin 23/GPIO 11/SCLK
-CH0/Pin 1   --> 10K R & FLEX-SENS GND
-
-----FLEX SENSOR
-VCC --> Pin 1/3.3v
-GND --> 10K R
-10K R --> Pin 6/GND
+VCC --> Pin 1 / 3.3V
+GND --> Pin 6 / GND
+SDA --> Pin 3 / GPIO 2
+SCL --> Pin 5 / GPIO 3
+AD0 --> Pin 6 / GND          (Sets I2C Address to 0x68)
 
 ----------------------------------
-     MOTOR/TRANSISTOR/DIODE
+        IMU #2 (Finger Tip)
 ----------------------------------
-----TRANSISTOR
-EMITTER --> Pin 6/GND
-BASE --> 1K R
-1K R --> Pin 11/GPIO 17
-COLLECTOR --> NEG
+VCC --> Pin 1 / 3.3V
+GND --> Pin 14 / GND
+SDA --> Pin 3 / GPIO 2
+SCL --> Pin 5 / GPIO 3
+AD0 --> Pin 1 / 3.3V         (Sets I2C Address to 0x69)
 
-----DIODE
-CATHODE --> 3.3V/Meet With Positive Motor Line
-ANODE --> COLLECTOR
+----------------------------------
+     MOTOR / TRANSISTOR / DIODE
+----------------------------------
+----TRANSISTOR (NPN / e.g. PN2222)
+EMITTER   --> Pin 20 / GND
+BASE      --> 1K R
+1K R      --> Pin 11 / GPIO 17
+COLLECTOR --> MOTOR NEG / DIODE ANODE
 
-----MOTOR
-POS --> CATHODE/3.3V
-NEG --> COLLECTOR
+----DIODE (Flyback)
+CATHODE   --> Pin 2 / 5V  (5V provides stronger vibration than 3.3V)
+ANODE     --> COLLECTOR / MOTOR NEG
+
+----MOTOR (ERM Vibration Coin)
+POS       --> Pin 2 / 5V  (Connected to Diode Cathode)
+NEG       --> COLLECTOR / DIODE ANODE
