@@ -1,0 +1,22 @@
+I just designed model two.
+It is rather big and I don't know why I designed it like that. 
+I made it so that the TPU wristband is a separate part designed to slide on and off.
+The problem is that I don't know how to design the notch.
+How can I design the notch.
+I have one idea. 
+Look at the model from the side.
+Then pick a point on the side and create the notch like that.
+After that it might be possible to move the sketch to the center halfway through the dovetail.
+Then we extrude it and do the same on the inside but instead of join we do a cut. 
+I need to test it out but there is one slight problem. 
+The raspberry Pi 2 zero W is super expensive to buy because there is basically a RAMPOCALYPSE but for that microcontroller right now.
+This means that we would be spending over $100 dollars to find it. 
+SO we need to pivot.
+A new microcontroller, we need now.
+SO we are pivoting to use a raspberry Pi PICO.
+This means that I have to redesign everything.
+I can get that done but it will take a while. 
+
+Thank you. 
+
+Kumar N. -Lead 3d modeler, lead engineer, assistant computer scientist.
