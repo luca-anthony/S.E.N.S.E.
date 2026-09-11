@@ -10,7 +10,7 @@ Raspberry Pi Pico<sup>[9]</sup> $9.99USD\
 Sunlu TPU 95A Filament<sup>[10]</sup> $30.99USD \ 
 Sunlu ASA Filament<sup>[11]</sup> $25.99USD
 
-<a href="https://www.amazon.com/dp/B0B94JZ2YF?ref=clp_hp_h_pc&th=1">Microcontroller<sup>[1]</sup></a>\
+<a href="https://www.amazon.com/dp/B0B94JZ2YF?ref=clp_hp_h_pc&th=1">ESP32<sup>[1]</sup></a>\
 <a href="https://www.amazon.com/dp/B09V4DS888?lv=shuf&channelId=500&plpRedirect=mhFallback">Distance sensors<sup>[2]</sup>\
 <a href="">REMOVED<sup>[3]</sup><la>\
 <a href="https://www.amazon.com/dp/B0993GDD7N?ref=clp_hp_h_pc&th=1">1027 Coin Cell Vibration Motor<sup>[4]</sup></a>\
