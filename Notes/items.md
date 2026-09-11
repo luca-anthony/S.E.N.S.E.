@@ -1,5 +1,5 @@
 Seeed Studio XIAO ESP32-C3<sup>[1]</sup> $9.90USD \
-VL53L1X<sup>[2]</sup> $14.99USD\
+VL53L1X<sup>[2]</sup> $14.99USDx2 \
 REMOVED<sup>[3]</sup> \
 1027 Coin Cell Vibration Motor<sup>[4]</sup> $6.99USD \
 2N2222 NPN Transistor(s)<sup>[5]</sup> $9.99USD \
@@ -8,7 +8,8 @@ LSM6DS3TR-C IMU unit<sup>[7]</sup> $9.95USDx2 \
 1N4001 Diode<sup>[8]</sup> $4.74USD \
 Raspberry Pi Pico 2 W<sup>[9]</sup> $13.99USD\
 Sunlu TPU 95A Filament<sup>[10]</sup> $30.99USD \
-Sunlu ASA Filament<sup>[11]</sup> $25.99USD
+Sunlu ASA Filament<sup>[11]</sup> $25.99USD \
+Winfox 3.7V 1000mAh 803040 LiPo Battery<sup>[12]</sup> $7.99USDx2 
 
 <h3>TOTAL</h3>
 
@@ -25,3 +26,4 @@ $131.42 USD (Not including tax or shipping)
 <a href="https://www.amazon.com/Pico-Microcontroller-Bluetooth-MicroPython-CircuitPython/dp/B0DPF9N1MN/ref=sr_1_1?crid=1D90WO9JQSBNV&dib=eyJ2IjoiMSJ9.K7RF40OxhfXiJPTcDvxcq5B3xK6VL3UqxzUnT_tyJkAfOuGaSWzixzYnjYhi5WBkcQu1LtydgisW1baLA5NOfeelhS9PHX79Mb2Gg8KmgiUO5ftWMj7QJgQkkNN92fshsNGMPPeOZzPon44rD_wiVXqI0J7ZWQFXevw9lMYpEvGt1C4GdYYPKNHMH3Yxn-3WHsGOzfRvmB7bqUjJxF0kPYqakVOicfwfVyLj5xP8P_s.ocl4k8htPIO-lHJf8xMUfuvdTWYG0YeXjJJMmGl6uMk&dib_tag=se&keywords=raspberry%2Bpi%2Bpico%2B2%2Bw&qid=1789137914&sprefix=raspberry%2Bpi%2Bpico%2B2%2Bw%2Caps%2C243&sr=8-1&th=1">Raspberry Pi Pico<sup>[9]</sup></a>\
 <a href="https://www.amazon.com/SUNLU-TPU-Filament-1-75mm-Flexible/dp/B0BXNWK6NS?th=1">Sunlu TPU 95A filament<sup>[10]</sup></a>\
 <a href="https://www.amazon.com/SUNLU-ASA-Filament-3D-Printer/dp/B0B18CQGQJ/ref=sr_1_3?crid=32ZNMRA5Q9GAG&dib=eyJ2IjoiMSJ9.uoBcb12W5CmgBVyYx6zoBiWZ2gxXjiB1GmO6R34V122QkYeIttPDq0imwSHKlm7BzDqvUAiigix1zNGrN3Nsp4DCji5UcKanmJdlvyKtt9ENQ2Y9dhvpQMkBwv_H6ymltSnebzaOEdU1757xwLm1TsYJhf2QDcek1wN3XSsGGePywPYBBgB9noeMEv6FJPdtEKbjWNnuzBmfmYi9ErX2fzsL5Fzm9RFgt2YVQAKzmMg.TfK1d99uaQpFxHMTE0Atl0cmUWo7NG5T7jcks4_xn1A&dib_tag=se&keywords=Sunlu%2BASA&qid=1787759040&sprefix=sunlu%2Basa%2Caps%2C190&sr=8-3&th=1">Sunlu ASA filament<sup>[11]</sup></a>
+<a href="https://www.amazon.com/Winfox-Rechargeable-Connector-Bluetooth-Portable/dp/B0GDQJXJZM/ref=sr_1_12?dib=eyJ2IjoiMSJ9.fpFkmNmYNvvkutq8vgRJyl5R5kJQSpcxonSWN4sI-uGfcnuyCQUebfbpPbUws_64Xbj5AI5Jl9iD49GuO-al5Ujjnqr1dKRzYwGbSRxKW4dpVa8peqhqqO0XeeU4sK4h2oEx-dROPRNLjOR2eOEPg5MWkocFd4yhMJ2elNtmgNPzbfck2z6-alY6vJ8y5EmAqN14Nlprxogpy1bCi-lZV2ydi5KKMqOvVwPe5_RGr3D-cVQGKL7v2LqjaviDZZWq8SWUSgKEFg7LteKUntUNv5DfQEnQBOEB9WNFU94xoyw.5GOUbSYyWpE2m3DwRiT53ltWl4GGnBGmjEh6lwcSckA&dib_tag=se&keywords=1000mah%2Bbattery&qid=1789138905&refinements=p_72%3A1248903011&rnid=1248901011&sr=8-12&th=1">Battery<sup>[12]</sup></a>
