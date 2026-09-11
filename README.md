@@ -31,7 +31,7 @@ cd S.E.N.S.E./Code/Bash && chmod +x setup.sh && ./setup.sh
 
 After installing everything, look in the Code/Python for the config.py file and follow the steps for wiring.
 
-<h4>NOTE:</h4>h4> \
+<h4>NOTE:</h4> \
 The team has decided against using the Raspberry Pi Zero 2 W.\
 Any code for this Micro-Computer is not going to be updated anymore as of 11 September 2026.
 
