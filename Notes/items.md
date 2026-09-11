@@ -13,7 +13,8 @@ Winfox 3.7V 1000mAh 803040 LiPo Battery<sup>[12]</sup> $7.99USDx2
 
 <h3>TOTAL</h3>
 
-$131.42 USD (Not including tax or shipping)
+$172.44 USD (Not including tax or shipping)\
+$115.46 (Without filament, Not including tax or shipping)
 
 <a href="https://www.amazon.com/dp/B0B94JZ2YF?ref=clp_hp_h_pc&th=1">ESP32<sup>[1]</sup></a>\
 <a href="https://www.amazon.com/dp/B09V4DS888?lv=shuf&channelId=500&plpRedirect=mhFallback">Distance sensors<sup>[2]</sup>\
