@@ -12,7 +12,7 @@ Sunlu ASA Filament<sup>[11]</sup> $25.99USD
 
 <h3>TOTAL</h3>
 
-$131.42 USD
+$131.42 USD (Not including tax or shipping)
 
 <a href="https://www.amazon.com/dp/B0B94JZ2YF?ref=clp_hp_h_pc&th=1">ESP32<sup>[1]</sup></a>\
 <a href="https://www.amazon.com/dp/B09V4DS888?lv=shuf&channelId=500&plpRedirect=mhFallback">Distance sensors<sup>[2]</sup>\
