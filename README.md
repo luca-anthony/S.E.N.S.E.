@@ -49,6 +49,9 @@ To bring more light to the world.
 Below is the link to the Science Fair Submission Form: \
 <a href="https://docs.google.com/document/d/1CFBRvUg9vLzjQzCuhzTcyJ6CodzclPNGb9Yas1JmrjE/edit?pli=1&tab=t.0">Document</a>
 
+Below is the link to the Final Research Paper and the drafts. \
+<a href="https://docs.google.com/document/d/1NYGTEB_40bhyAXyYJ5kPaozn24XC8YlPzl25bhtnPuw/edit?usp=sharing">Document(s)</a>
+
 
 
 <h5>Buy Us a Coffee!</h5>
