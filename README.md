@@ -34,7 +34,7 @@ After installing everything, look in the Code/Python for the config.py file and 
 <h4>NOTE:</h4>
 
 The team has decided against using the Raspberry Pi Zero 2 W.\
-Any code for this Micro-Computer is not going to be updated anymore as of 11 September 2026.
+Any code for this Micro-Computer is not going to be updated as of 11 September 2026.
 
 <h1>Contributions and Thanks</h1>
 
