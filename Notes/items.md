@@ -7,8 +7,8 @@ REMOVED<sup>[3]</sup> \
 LSM6DS3TR-C IMU unit<sup>[7]</sup> $9.95USDx2 \
 1N4001 Diode<sup>[8]</sup> $4.74USD \
 Raspberry Pi Pico 2 W<sup>[9]</sup> $13.99USD\
-Sunlu TPU 95A Filament<sup>[10]</sup> $30.99USD \ 
-Sunlu ASA Filament<sup>[11]</sup> $25.99USD 
+Sunlu TPU 95A Filament<sup>[10]</sup> $30.99USD \
+Sunlu ASA Filament<sup>[11]</sup> $25.99USD
 
 <h3>TOTAL</h3>
 
