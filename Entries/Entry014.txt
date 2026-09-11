@@ -1,0 +1,41 @@
+How do we deliver the presentation?
+We have to present this to both people who do know what were doing and people who may not understand.
+This means that we either have one presentation with a balance between nerding out and heavy explanation.
+We need people to understand all the features S.E.N.S.E has. 
+
+How can we plan this? 
+
+For the Science Fair district presentation we nerd out. 
+This means explaning every part of the project, including the following:
+*The Model design.
+*How it was printed.
+*The Electronic wiring.
+*The Schematics.
+*Code (final program only)
+*All parts used.
+*The simulation.(On one laptop)
+*The final 3D model (On another Laptop)
+*The code (another laptop)
+*The basic logic, (on the Laminated posterboard)
+
+This means that for the Science Fair we need a Completely filled Laminated poster. 
+So we need a list of things that go in the poster. 
+*The beginning research.
+*Topic problem, (along with the project title which will be S.E.N.S.E. Subtitled with Brought To You By ENLIGHTEN.
+*The Hypothesis. 
+*Background research. 
+*Building the glove.
+*Materials list, (with pricing)
+*The testing on how it was done. 
+*Conclusion, of the project.
+*Future expansions. 
+*Charts on how it performed.
+
+The Video summary will be done on the slideshow. 
+We need animations on this project on the slideshow.
+Maybe even showing the model. 
+We need to explain it in a way that normal people will understand.
+We also have to do this under 3 minutes.
+Overall this might be possible.
+
+Kumar N. -Lead 3d modeler, lead engineer, assistant computer scientist.
