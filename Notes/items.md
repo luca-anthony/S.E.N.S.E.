@@ -8,8 +8,10 @@ LSM6DS3TR-C IMU unit<sup>[7]</sup> $9.95USDx2 \
 1N4001 Diode<sup>[8]</sup> $4.74USD \
 Raspberry Pi Pico 2 W<sup>[9]</sup> $13.99USD\
 Sunlu TPU 95A Filament<sup>[10]</sup> $30.99USD \ 
-Sunlu ASA Filament<sup>[11]</sup> $25.99USD \
-TOTAL: \
+Sunlu ASA Filament<sup>[11]</sup> $25.99USD 
+
+<h3>TOTAL</h3>
+
 $131.42 USD
 
 <a href="https://www.amazon.com/dp/B0B94JZ2YF?ref=clp_hp_h_pc&th=1">ESP32<sup>[1]</sup></a>\
