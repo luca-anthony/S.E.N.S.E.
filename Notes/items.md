@@ -1,4 +1,4 @@
-Seeed Studio XIAO ESP32-C3<sup>[1]</sup> $9.90USD \
+REMOVED<sup>[1]</sup>\
 VL53L1X<sup>[2]</sup> $14.99USDx2 \
 REMOVED<sup>[3]</sup> \
 1027 Coin Cell Vibration Motor<sup>[4]</sup> $6.99USD \
@@ -6,17 +6,17 @@ REMOVED<sup>[3]</sup> \
 1kΩ Resistor<sup>[6]</sup> $3.99USD \
 LSM6DS3TR-C IMU unit<sup>[7]</sup> $9.95USDx2 \
 1N4001 Diode<sup>[8]</sup> $4.74USD \
-Raspberry Pi Pico 2 W<sup>[9]</sup> $13.99USD\
+Raspberry Pi Pico<sup>[9]</sup> $9.99USD\
 Sunlu TPU 95A Filament<sup>[10]</sup> $30.99USD \
 Sunlu ASA Filament<sup>[11]</sup> $25.99USD \
 Winfox 3.7V 1000mAh 803040 LiPo Battery<sup>[12]</sup> $7.99USDx2 
 
 <h3>TOTAL</h3>
 
-$172.44 USD (Not including tax or shipping)\
-$115.46 (Without filament, Not including tax or shipping)
+$158.54 USD (Not including tax or shipping) \
+$101.56 USD (Without filament, Not including tax or shipping)
 
-<a href="https://www.amazon.com/dp/B0B94JZ2YF?ref=clp_hp_h_pc&th=1">ESP32<sup>[1]</sup></a>\
+<a href="">REMOVED<sup>[1]</sup></a>\
 <a href="https://www.amazon.com/dp/B09V4DS888?lv=shuf&channelId=500&plpRedirect=mhFallback">Distance sensors<sup>[2]</sup>\
 <a href="">REMOVED<sup>[3]</sup><la>\
 <a href="https://www.amazon.com/dp/B0993GDD7N?ref=clp_hp_h_pc&th=1">1027 Coin Cell Vibration Motor<sup>[4]</sup></a>\
@@ -24,7 +24,7 @@ $115.46 (Without filament, Not including tax or shipping)
 <a href="https://www.amazon.com/California-JOS-Tolerance-Resistor-Resistance/dp/B0BDKV2TY5/ref=sr_1_4?dib=eyJ2IjoiMSJ9.OakRYCXvaO2nT7xsPaEmyCbd5qis72aoNVCY_CL6Ke4XIwMSIC_mkvksjEiqg6BA-O0u_ZQvjtwqHTXQvi3oqNQau6Re8akIJZ1z6Uw498a4fgNTy2h7Beg49sZN6hxeFl6yCYSCUM80Ci96iPmqMM72hFii7-I4loCVc5qm12Z42Mw-reIWZ2BX7tSkMySwXDIBg_Lp_XRkBCFCmHKrCSKc0rkkwvERBHi-_Sk_VvA.X7ov8sklFBzNvtH-h34irW5FjSmNK8pchPc8IKnFu-c&dib_tag=se&keywords=1k%CE%A9%2BResistor&qid=1789137990&sr=8-4&th=1">1kΩ Resistor<sup>[6]</sup>\
 <a href="https://www.adafruit.com/product/4503?gad_source=4&gad_campaignid=23986111167&gbraid=0AAAAADx9JvS9uNBmHmY8Gr3G9pPZipj7e&gclid=CjwKCAjwnvTUBhBoEiwAZNDxZ6hsRBqnxquXEHN792rebK7xfTZGZrIRCKVOAi6cwJpaJGLKO2DAMhoCvJkQAvD_BwE">IMU unit<sup>[7]</sup></a>\
 <a href="https://www.amazon.com/EEEEE-1N4001-Rectifier-Electronic-Silicon/dp/B0FC2CTBJR/ref=sr_1_1_sspa?dib=eyJ2IjoiMSJ9.sEc4tpBcVZHbMW5GWXSbiEBma-27STh5mozygLuKPlPxNsfMqlOM9FseH7Dcm42jSbkDtOnR6ag5sxTDQJQJ_OEQ8pSvPsPPCs69ch0xhhvf4ZkZWkiU2Z6ZcbgrhNioZAjilEoO9YyEj_6lF9kunvfumrOZ5sn00b3sVvO7o2l08f6GTarnvba9lTGXdgCnJpONXR89272_rlckzKRuJ3I6TPfMI7eacSBJoUcGIhE.viaDa4gWqCGIcEC2miKLU9AYJ9WhAtsR69K2ZMCazEU&dib_tag=se&keywords=1n4001%2Bdiode&qid=1788189005&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1">1N4001 Diode<sup>[8]</sup></a>\
-<a href="https://www.amazon.com/Pico-Microcontroller-Bluetooth-MicroPython-CircuitPython/dp/B0DPF9N1MN/ref=sr_1_1?crid=1D90WO9JQSBNV&dib=eyJ2IjoiMSJ9.K7RF40OxhfXiJPTcDvxcq5B3xK6VL3UqxzUnT_tyJkAfOuGaSWzixzYnjYhi5WBkcQu1LtydgisW1baLA5NOfeelhS9PHX79Mb2Gg8KmgiUO5ftWMj7QJgQkkNN92fshsNGMPPeOZzPon44rD_wiVXqI0J7ZWQFXevw9lMYpEvGt1C4GdYYPKNHMH3Yxn-3WHsGOzfRvmB7bqUjJxF0kPYqakVOicfwfVyLj5xP8P_s.ocl4k8htPIO-lHJf8xMUfuvdTWYG0YeXjJJMmGl6uMk&dib_tag=se&keywords=raspberry%2Bpi%2Bpico%2B2%2Bw&qid=1789137914&sprefix=raspberry%2Bpi%2Bpico%2B2%2Bw%2Caps%2C243&sr=8-1&th=1">Raspberry Pi Pico<sup>[9]</sup></a>\
+<a href="[https://www.amazon.com/Pico-Microcontroller-Bluetooth-MicroPython-CircuitPython/dp/B0DPF9N1MN/ref=sr_1_1?crid=1D90WO9JQSBNV&dib=eyJ2IjoiMSJ9.K7RF40OxhfXiJPTcDvxcq5B3xK6VL3UqxzUnT_tyJkAfOuGaSWzixzYnjYhi5WBkcQu1LtydgisW1baLA5NOfeelhS9PHX79Mb2Gg8KmgiUO5ftWMj7QJgQkkNN92fshsNGMPPeOZzPon44rD_wiVXqI0J7ZWQFXevw9lMYpEvGt1C4GdYYPKNHMH3Yxn-3WHsGOzfRvmB7bqUjJxF0kPYqakVOicfwfVyLj5xP8P_s.ocl4k8htPIO-lHJf8xMUfuvdTWYG0YeXjJJMmGl6uMk&dib_tag=se&keywords=raspberry%2Bpi%2Bpico%2B2%2Bw&qid=1789137914&sprefix=raspberry%2Bpi%2Bpico%2B2%2Bw%2Caps%2C243&sr=8-1&th=1](https://www.amazon.com/Raspberry-Pi-Pico/dp/B09KVB8LVR/ref=sr_1_1?crid=1D0WN8N6D5435&dib=eyJ2IjoiMSJ9.KhN-eo1QUief6dgXnlRewOD_5s_2kVFK-6pw5wXpUodKxPaBrfSFjEQJqHOf30IeiPTn35m7eIGbuOWs2OLcbOthNKG5o9uRqybJb1CQBX_eFq77_sBc6q49PmaSCG2biVOoJA_-G96i4OXdjz3OJqEUPJVG2NtWCqzVPt5ywufz3EAn398n3JnIt5Lfa9VK1fwwxsFoJ0RzAsK3sTlRqtd2Y8MsTqE0nx_aYZN1K5A.kiZqPiU_arJzd3ZkYUGEvRNvs76hbCDulp9Lhys_t0s&dib_tag=se&keywords=Raspberry+Pi+Pico&qid=1789175255&sprefix=raspberry+pi+pico%2Caps%2C154&sr=8-1)">Raspberry Pi Pico<sup>[9]</sup></a>\
 <a href="https://www.amazon.com/SUNLU-TPU-Filament-1-75mm-Flexible/dp/B0BXNWK6NS?th=1">Sunlu TPU 95A filament<sup>[10]</sup></a>\
 <a href="https://www.amazon.com/SUNLU-ASA-Filament-3D-Printer/dp/B0B18CQGQJ/ref=sr_1_3?crid=32ZNMRA5Q9GAG&dib=eyJ2IjoiMSJ9.uoBcb12W5CmgBVyYx6zoBiWZ2gxXjiB1GmO6R34V122QkYeIttPDq0imwSHKlm7BzDqvUAiigix1zNGrN3Nsp4DCji5UcKanmJdlvyKtt9ENQ2Y9dhvpQMkBwv_H6ymltSnebzaOEdU1757xwLm1TsYJhf2QDcek1wN3XSsGGePywPYBBgB9noeMEv6FJPdtEKbjWNnuzBmfmYi9ErX2fzsL5Fzm9RFgt2YVQAKzmMg.TfK1d99uaQpFxHMTE0Atl0cmUWo7NG5T7jcks4_xn1A&dib_tag=se&keywords=Sunlu%2BASA&qid=1787759040&sprefix=sunlu%2Basa%2Caps%2C190&sr=8-3&th=1">Sunlu ASA filament<sup>[11]</sup></a>
 <a href="https://www.amazon.com/Winfox-Rechargeable-Connector-Bluetooth-Portable/dp/B0GDQJXJZM/ref=sr_1_12?dib=eyJ2IjoiMSJ9.fpFkmNmYNvvkutq8vgRJyl5R5kJQSpcxonSWN4sI-uGfcnuyCQUebfbpPbUws_64Xbj5AI5Jl9iD49GuO-al5Ujjnqr1dKRzYwGbSRxKW4dpVa8peqhqqO0XeeU4sK4h2oEx-dROPRNLjOR2eOEPg5MWkocFd4yhMJ2elNtmgNPzbfck2z6-alY6vJ8y5EmAqN14Nlprxogpy1bCi-lZV2ydi5KKMqOvVwPe5_RGr3D-cVQGKL7v2LqjaviDZZWq8SWUSgKEFg7LteKUntUNv5DfQEnQBOEB9WNFU94xoyw.5GOUbSYyWpE2m3DwRiT53ltWl4GGnBGmjEh6lwcSckA&dib_tag=se&keywords=1000mah%2Bbattery&qid=1789138905&refinements=p_72%3A1248903011&rnid=1248901011&sr=8-12&th=1">Battery<sup>[12]</sup></a>
