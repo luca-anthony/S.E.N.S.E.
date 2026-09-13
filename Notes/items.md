@@ -11,6 +11,8 @@ Sunlu TPU 95A Filament<sup>[10]</sup> $30.99USD \
 Sunlu ASA Filament<sup>[11]</sup> $25.99USD \
 Winfox 3.7V 1000mAh 803040 LiPo Battery<sup>[12]</sup> $7.99USDx2 \
 Bourns Inc. MF-R050-ND PPTC Fuse<sup>[13]</sup> $9.99USD
+WWZMDiB 840 Pin Breadboard Jumper Wires Kit<sup>[14]</sup> $8.99USD \
+Rindion 32 Pcs PCB Boards<sup>[15]</sup> $7.99USD
 
 <h3>TOTAL</h3>
 
@@ -29,4 +31,6 @@ $101.56 USD (Without filament, Not including tax or shipping)
 <a href="https://www.amazon.com/SUNLU-TPU-Filament-1-75mm-Flexible/dp/B0BXNWK6NS?th=1">Sunlu TPU 95A filament<sup>[10]</sup></a>\
 <a href="https://www.amazon.com/SUNLU-ASA-Filament-3D-Printer/dp/B0B18CQGQJ/ref=sr_1_3?crid=32ZNMRA5Q9GAG&dib=eyJ2IjoiMSJ9.uoBcb12W5CmgBVyYx6zoBiWZ2gxXjiB1GmO6R34V122QkYeIttPDq0imwSHKlm7BzDqvUAiigix1zNGrN3Nsp4DCji5UcKanmJdlvyKtt9ENQ2Y9dhvpQMkBwv_H6ymltSnebzaOEdU1757xwLm1TsYJhf2QDcek1wN3XSsGGePywPYBBgB9noeMEv6FJPdtEKbjWNnuzBmfmYi9ErX2fzsL5Fzm9RFgt2YVQAKzmMg.TfK1d99uaQpFxHMTE0Atl0cmUWo7NG5T7jcks4_xn1A&dib_tag=se&keywords=Sunlu%2BASA&qid=1787759040&sprefix=sunlu%2Basa%2Caps%2C190&sr=8-3&th=1">Sunlu ASA filament<sup>[11]</sup></a> \
 <a href="https://www.amazon.com/Winfox-Rechargeable-Connector-Bluetooth-Portable/dp/B0GDQJXJZM/ref=sr_1_12?dib=eyJ2IjoiMSJ9.fpFkmNmYNvvkutq8vgRJyl5R5kJQSpcxonSWN4sI-uGfcnuyCQUebfbpPbUws_64Xbj5AI5Jl9iD49GuO-al5Ujjnqr1dKRzYwGbSRxKW4dpVa8peqhqqO0XeeU4sK4h2oEx-dROPRNLjOR2eOEPg5MWkocFd4yhMJ2elNtmgNPzbfck2z6-alY6vJ8y5EmAqN14Nlprxogpy1bCi-lZV2ydi5KKMqOvVwPe5_RGr3D-cVQGKL7v2LqjaviDZZWq8SWUSgKEFg7LteKUntUNv5DfQEnQBOEB9WNFU94xoyw.5GOUbSYyWpE2m3DwRiT53ltWl4GGnBGmjEh6lwcSckA&dib_tag=se&keywords=1000mah%2Bbattery&qid=1789138905&refinements=p_72%3A1248903011&rnid=1248901011&sr=8-12&th=1">Battery<sup>[12]</sup></a> \
-<a href="amazon.com/gp/product/B085RDTCCV/ref=sw_img_1?smid=&psc=1">Fuses<sup>[13]</sup></a>
+<a href="amazon.com/gp/product/B085RDTCCV/ref=sw_img_1?smid=&psc=1">Fuses<sup>[13]</sup></a> \
+<a href="https://www.amazon.com/gp/product/B0BWGZRGYP/ref=ewc_pr_img_2?smid=A1YZW40LYQY3L1&psc=1">Wires<sup>[14]</sup></a> \
+<a href="https://www.amazon.com/gp/product/B0DBZ1BXFZ/ref=ewc_pr_img_1?smid=A1Z1ENBD0KSZ4W&psc=1">PCBs<sup>[15]</sup></a>
