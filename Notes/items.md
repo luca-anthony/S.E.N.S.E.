@@ -16,8 +16,8 @@ Rindion 32 Pcs PCB Boards<sup>[15]</sup> $7.99USD
 
 <h3>TOTAL</h3>
 
-$158.54 USD (Not including tax or shipping) \
-$101.56 USD (Without filament, Not including tax or shipping)
+$172.52 USD (Not including tax or shipping) \
+$118.54 USD (Without filament, Not including tax or shipping)
 
 <a href="">REMOVED<sup>[1]</sup></a>\
 <a href="https://www.amazon.com/dp/B09V4DS888?lv=shuf&channelId=500&plpRedirect=mhFallback">Distance sensors<sup>[2]</sup>\
