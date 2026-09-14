@@ -254,6 +254,13 @@ void loop() {
     // Reset flag for next reading
     sensor.clearInterrupt();
 
+    // Read distance and run logic
+    VL53L1XLogic1();
+    VL53L1XLogic2();
 
+    // Read button state and press
+    modeSwitch();
+
+    delay(50);
   }
 }
