@@ -34,15 +34,18 @@ After installing everything, look in the Code/Python for the config.py file and 
 <h4>NOTE:</h4>
 
 The team has decided against using the Raspberry Pi Zero 2 W.\
-Any code for this Micro-Computer is not going to be updated as of 11 September 2026.
+Any code or files for this Micro-Computer is not going to be updated as of 11 September 2026.
 
 <h1>Contributions and Thanks</h1>
 
-Lou O. Anthony, lead scientist, lead computer scientist, assistant engineer, \
-Kumar Nandi, lead engineer, lead 3D and 2D modeler, assistant computer scientist, \
-Ty L. Garay, lead visionary, assistant 3D and 2D modeler, assistant engineer,
+<h4>Donations and Funding</h4>
 
-And from the bottom of our hearts, <i>thank you.</i>
+Logan Anthony - $30 \
+(DEV) Kumar Nandi - $50 \
+(DEV) Lou Anthony - $50 \
+Reese Green - $1
+
+To all of the people who donated or contributed to the project and or ENLIGHTEN, from the bottom of our hearts, <i>thank you</i>.
 
 We are ENLIGHTEN. \
 To bring more light to the world. 
@@ -52,17 +55,18 @@ To bring more light to the world.
 <b>This section is irrelevant to anyone who is not a student or teacher at our school or who is not a direct contributor to S.E.N.S.E.</b>
 
 Below is the link to the Science Fair Submission Form: \
-<a href="https://docs.google.com/document/d/1CFBRvUg9vLzjQzCuhzTcyJ6CodzclPNGb9Yas1JmrjE/edit?pli=1&tab=t.0">Document</a>
+<a href="https://docs.google.com/document/d/1qRC2OpuflSs2WIL9HmuddMR0fpJTnckwT1Jk4RrbsxM/edit?usp=sharing">Document</a>
 
 Below is the link to the Final Research Paper and the drafts. \
 <a href="https://docs.google.com/document/d/1NYGTEB_40bhyAXyYJ5kPaozn24XC8YlPzl25bhtnPuw/edit?usp=sharing">Document(s)</a>
 
+If you want to donate or look in funding parts of this project text or call +1 (210) 865-7632 to discuss the matter.
 
+<h4>Developers</h4>
 
-<h5>Buy Us a Coffee!</h5>
-
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/H2H51P5AZ2)
-
+Lou O. Anthony, lead scientist, lead computer scientist, assistant engineer, \
+Kumar Nandi, lead engineer, lead 3D and 2D modeler, assistant computer scientist, \
+Ty L. Garay, lead visionary, assistant 3D and 2D modeler, assistant engineer
 
 <b>In Loving Memory of Anthony Garay</b> \
 <b>You would’ve loved this</b>
