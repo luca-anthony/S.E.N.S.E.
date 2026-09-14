@@ -1,0 +1,8 @@
+MAC
+
+dot_clean <Path to drive>
+
+WINDOWS
+
+cd <drive>
+Get-ChildItem -Path . -Filter "._*" -Recurse -Force | Remove-Item -Force
