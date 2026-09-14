@@ -11,8 +11,8 @@ const int MOT_IO = 17;
 const int LED_IO = 18;
 const int BTN_IO = 19;
 
-const int DIST_THRESH_CM1 = 80;
-const int DIST_THRESH_CM2 = 4;
+const int DIST_THRESH = 100;
+const int16_t CHANGE_THRESH = 196;
 
 const int MOT_MIN_PWM = 100;
 const int MOT_MAX_PWM = 255;
@@ -27,6 +27,8 @@ const float DISTANCE_SMOOTHING_ALPHA   = 0.35; // 0=very smooth/slow, 1=raw/inst
 #undef Wire
 arduino::MbedI2C Wire(4, 5);
 
+Adafruit_VL53L1X sensor = Adafruit_VL53L1X();
+
 //======================
 //       GLOBALS
 //======================
@@ -38,7 +40,10 @@ float smoothedDistanceCM = -1;      // -1 means "no valid reading yet"
 
 unsigned long lastSensRead = 0;
 unsigned long lastDebounceTime = 0;
+int16_t distance = 0;
+
 int lastButtonReading = HIGH; // pull=up idle state
+int lastButtonState = HIGH; 
 
 //---------------------------------------------------------------
 // Haptic feedback patterns
@@ -102,11 +107,35 @@ void initIMU2() {
     Serial.println("LSM6DS3TR-C Successfully Connected!");
 }
 
+
 //======================
 //  MODE SWITCH LOGIC
 //======================
 void modeSwitch() {
-  if 
+  int reading = digitalRead(BTN_IO);
+
+  if (reading != lastButtonState) {
+    lastDebounceTime = millis();
+  }
+
+  if ((millis() - lastDebounceTime) > DEBOUNCE_MS) {
+    // If the button state has stably changed to LOW (pressed)
+    if (reading == LOW && lastButtonState == HIGH) {
+      // Toggle mode between 1 and 2
+      mode = (mode == 1) ? 2 : 1;
+      
+      Serial.print("Mode changed to: ");
+      Serial.println(mode);
+      
+      // Save the preference permanently
+      prefs.putUChar("mode", mode);
+      
+      // Provide feedback
+      announceMode();
+    }
+  }
+
+  lastButtonState = reading;
 }
 
 //======================
@@ -132,10 +161,60 @@ void initVL53L1X() {
   vl53.setTimingBudget(SENSOR_INTERVAL_MS);
 }
 
+
+//======================
+//    VL53L1X LOGIC1
+//======================
+void VL53L1XLogic1() {
+  Serial.println(F("RUNNING VL53L1X LOGIC FOR MODE 1"));
+
+  static int16_t lastDistance = -1; 
+
+  if (distance != -1) {
+
+    if (lastDistance != -1) {
+
+      int16_t difference = abs(distance - lastDistance);
+
+      if (difference > CHANGE_THRESH) {
+        buzz(10, 255);
+      }
+    }
+  }
+}
+
+//======================
+//    VL53L1X LOGIC2
+//======================
+void VL53L1XLogic2() {
+  Serial.println(F("RUNNING VL53L1X LOGIC FOR MODE 2"));
+
+  int difference = DIST_THRESH - distance;
+  int count = 0;
+  int duration = 0;
+  int gap = 0;
+
+  // Closer than threshold
+  if (difference > 0) {
+    // Clamp difference to a max limit so mapping stays within expected bounds
+    int constrainedDiff = constrain(difference, 0, DIST_THRESH);
+
+    // As distance gets closer (difference increases):
+    // - count increases (e.g., 1 to 5 pulses)
+    // - duration increases (e.g., 50ms to 200ms per pulse)
+    // - gap decreases (e.g., 200ms down to 30ms between pulses for higher frequency)
+    int count    = map(constrainedDiff, 0, DIST_THRESH, 1, 5);
+    int duration = map(constrainedDiff, 0, DIST_THRESH, 50, 200);
+    int gap      = map(constrainedDiff, 0, DIST_THRESH, 200, 30);
+
+    buzzPattern(count, duration, gap);
+  }
+
+}
+
 //======================
 //        SETUP
 //======================
-
 void setup() {
   Serial.begin(115200);
 
@@ -160,4 +239,21 @@ void setup() {
   mode = prefs.getUChar("mode", 1);
 
 
+}
+
+//======================
+//        LOOP
+//======================
+void loop() {
+  // Check if DistSens has finished measurement
+  if (sensor.dataReady()) {
+
+    // Read dist in mm
+    distance = sensor.distance();
+
+    // Reset flag for next reading
+    sensor.clearInterrupt();
+
+
+  }
 }
