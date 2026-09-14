@@ -12,7 +12,8 @@ Sunlu ASA Filament<sup>[11]</sup> $25.99USD \
 Winfox 3.7V 1000mAh 803040 LiPo Battery<sup>[12]</sup> $7.99USDx2 \
 Bourns Inc. MF-R050-ND PPTC Fuse<sup>[13]</sup> $9.99USD
 WWZMDiB 840 Pin Breadboard Jumper Wires Kit<sup>[14]</sup> $8.99USD \
-Rindion 32 Pcs PCB Boards<sup>[15]</sup> $7.99USD
+Rindion 32 Pcs PCB Boards<sup>[15]</sup> $7.99USD\
+Soldering Iron and Solder of your choice \
 
 <h3>TOTAL</h3>
 
