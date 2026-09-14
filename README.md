@@ -68,5 +68,10 @@ Lou O. Anthony, lead scientist, lead computer scientist, assistant engineer, \
 Kumar Nandi, lead engineer, lead 3D and 2D modeler, assistant computer scientist, \
 Ty L. Garay, lead visionary, assistant 3D and 2D modeler, assistant engineer
 
+<h1>EXTRAS</h1>
+
+The website is no longer being updated as of 6 September 2026. \
+It was purely a fun break for the team, not actually meant to present information.
+
 <b>In Loving Memory of Anthony Garay</b> \
 <b>You would’ve loved this</b>
