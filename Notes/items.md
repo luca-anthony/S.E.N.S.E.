@@ -1,5 +1,5 @@
 REMOVED<sup>[1]</sup>\
-VL53L1X<sup>[2]</sup> $14.99USDx2 \
+VL53L1X<sup>[2]</sup> $14.99USD \
 REMOVED<sup>[3]</sup> \
 1027 Coin Cell Vibration Motor<sup>[4]</sup> $6.99USD \
 2N2222 NPN Transistor(s)<sup>[5]</sup> $9.99USD \
@@ -17,8 +17,8 @@ Soldering Iron and Solder of your choice
 
 <h3>TOTAL</h3>
 
-$172.52 USD (Not including tax or shipping) \
-$118.54 USD (Without filament, Not including tax or shipping)
+$157.53 USD (Not including tax or shipping) \
+$103.55 USD (Without filament, Not including tax or shipping)
 
 <a href="">REMOVED<sup>[1]</sup></a>\
 <a href="https://www.amazon.com/dp/B09V4DS888?lv=shuf&channelId=500&plpRedirect=mhFallback">Distance sensors<sup>[2]</sup>\
