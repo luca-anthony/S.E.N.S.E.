@@ -1,29 +1,66 @@
+#!/bin/bash
+
+# Exit immediately if a command exits with a non-zero status
+set -e
+
 # Install Git
+echo "Installing Git..."
 sudo apt update
 sudo apt install git -y
 git --version
 
 # Install Snap
-echo("Installing Snap")
+echo "Installing Snap..."
 sudo apt update
-sudo apt install snapd
+sudo apt install -y snapd
 
-echo("Installing Visual Studio Code")
+# Install VSCode
+echo "Installing Visual Studio Code..."
 wget -O vscode.deb "https://visualstudio.com"
-sudo apt update && sudo apt install ./vscode.deb
+sudo apt update 
+sudo apt install -y ./vscode.deb
 rm vscode.deb
 
-echo("Instaling PlatformIO")
+# Install PlatformIO Dependencies
+echo "Installing PlatformIO Dependencies..."
 sudo apt update
-sudo apt install -y python3-venv git
-# 1. Download and install PlatformIO's official udev rules
+sudo apt install -y python3-venv git curl
+
+# Download and apply PlatformIO Udev Rules
+echo "Configuring Udev Rules..."
 curl -fsSL https://githubusercontent.com | sudo tee /etc/udev/rules.d/99-platformio-udev.rules
 
-# 2. Restart the udev service
+# Restart udev service
 sudo service udev restart
 
-# 3. Add your user to the dialout and tty groups
+# Add user to hardware groups
 sudo usermod -a -G dialout $USER
 sudo usermod -a -G tty $USER
+
+# Install the VS Code extension
+echo "Installing PlatformIO IDE Extension..."
 code --install-extension platformio.platformio-ide
-code .
+
+# Trigger PlatformIO to install its Core CLI tools silently in the background
+echo "Initializing PlatformIO Core CLI (this may take a minute)..."
+python3 -c "$(curl -fsSL https://githubusercontent.com)"
+
+# Clone repository into the home directory
+echo "Cloning Git repository..."
+cd "$HOME"
+rm -rf S.E.N.S.E 
+git clone https://github.com/luca-anthony/S.E.N.S.E.
+
+cd "$HOME/S.E.N.S.E"
+
+# Run PlatformIO and Flash
+echo "Setting environment path..."
+export PATH="$HOME/.platformio/penv/bin:$PATH"
+
+echo "Initializing PlatformIO project configuration..."
+pio project init --board pico
+
+echo "Compiling and Flashing firmware..."
+pio run --target upload
+
+echo "Setup and flashing sequence complete!"
