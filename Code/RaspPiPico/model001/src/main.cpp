@@ -32,7 +32,8 @@ Adafruit_VL53L1X sensor = Adafruit_VL53L1X();
 //======================
 //       GLOBALS
 //======================
-VL53L1X lox;
+Adafruit_VL53L1X vl53 = Adafruit_VL53L1X(XSHUT_PIN, IRQ_PIN);
+LSM6DS3 myIMU(I2C_MODE, 0x6A);
 Preferences prefs;
 
 int mode = 1; // 1 = navigation, 2 = close-range
@@ -86,27 +87,14 @@ void announceError() {
 //======================
 // Instantiate the IMU object. 
 // 0x6A is the standard address for most breakout boards.
-LSM6DS3 myIMU(I2C_MODE, 0x6A); 
-void initIMU1() {
-   // Call begin() to initialize the IMU registers
+void initIMU() {
     if (myIMU.begin() != 0) {
-        Serial.println("Device error! Check your wiring or I2C address.");
-        while (1); // Halt if sensor not found
+        Serial.println("IMU Error! Check wiring or I2C address.");
+        announceError();
+    } else {
+        Serial.println("LSM6DS3TR-C Successfully Connected!");
     }
-    
-    Serial.println("LSM6DS3TR-C Successfully Connected!");
 }
-
-void initIMU2() {
-   // Call begin() to initialize the IMU registers
-    if (myIMU.begin() != 0) {
-        Serial.println("Device error! Check your wiring or I2C address.");
-        while (1); // Halt if sensor not found
-    }
-    
-    Serial.println("LSM6DS3TR-C Successfully Connected!");
-}
-
 
 //======================
 //  MODE SWITCH LOGIC
@@ -161,25 +149,20 @@ void initVL53L1X() {
   vl53.setTimingBudget(SENSOR_INTERVAL_MS);
 }
 
-
 //======================
 //    VL53L1X LOGIC1
 //======================
 void VL53L1XLogic1() {
-  Serial.println(F("RUNNING VL53L1X LOGIC FOR MODE 1"));
-
   static int16_t lastDistance = -1; 
 
   if (distance != -1) {
-
     if (lastDistance != -1) {
-
       int16_t difference = abs(distance - lastDistance);
-
       if (difference > CHANGE_THRESH) {
         buzz(10, 255);
       }
     }
+    lastDistance = distance; // Update state for next calculation
   }
 }
 
@@ -190,9 +173,6 @@ void VL53L1XLogic2() {
   Serial.println(F("RUNNING VL53L1X LOGIC FOR MODE 2"));
 
   int difference = DIST_THRESH - distance;
-  int count = 0;
-  int duration = 0;
-  int gap = 0;
 
   // Closer than threshold
   if (difference > 0) {
@@ -223,44 +203,38 @@ void setup() {
   pinMode(LED_IO, OUTPUT);
   pinMode(BTN_IO, INPUT_PULLUP);
 
-  // Declare BTNState
-  int btnState = digitalRead(BTN_IO);
-
   Wire.begin(); // Initialize I2C communication
 
   // Initialize DISTSENS' and IMUs
   initVL53L1X();
-  initIMU1();
-  initIMU2();
+  initIMU();
 
   // Restore last-used mode so the wearer doesn't have to re-select it
   // every time the device powers on.
   prefs.begin("sense", false);
   mode = prefs.getUChar("mode", 1);
 
-
+  announceReady();
 }
 
 //======================
 //        LOOP
 //======================
 void loop() {
-  // Check if DistSens has finished measurement
-  if (sensor.dataReady()) {
+  // Check Mode
+  modeSwitch();
 
-    // Read dist in mm
-    distance = sensor.distance();
+  // Poll distance sensor when data is available
+  if (vl53.dataReady()) {
+    distance = vl53.distance();
+    vl53.clearInterrupt();
 
-    // Reset flag for next reading
-    sensor.clearInterrupt();
-
-    // Read distance and run logic
-    VL53L1XLogic1();
-    VL53L1XLogic2();
-
-    // Read button state and press
-    modeSwitch();
-
-    delay(50);
+    // Mode 1
+    if (mode == 1) {
+      VL53L1XLogic1();
+    // Mode 2
+    } else if (mode == 2) {
+      VL53L1XLogic2();
+    }
   }
 }
