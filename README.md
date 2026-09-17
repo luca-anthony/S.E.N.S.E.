@@ -1,22 +1,6 @@
 <h1>ABSTRACT</h1>
 
-We are a group of middle school scientists trying our best to make life easier for all kinds of people.\
-With this specific idea, we are trying to help blind people or people with severe visual impairment.
-
-With this idea, our goal is to make it easier for this demographic to do things and not do things. Allow us to explain.
-
-What this device does is that when your hand is fully extended, it turns on and, through sensors on the palm of the glove, starts measuring the distance between your hand and an object or thing near you.\
-If it is within a certain threshold, it will start to vibrate.
-
-The reason we wanted to make this is that a lot of blind people struggle with getting around or even just reaching for things without knocking them over.\
-This helps by letting you know when you may be just a bit too close to something.
-
-There are two modes: one for just getting around that has a greater threshold, and one with a smaller threshold for when you are going to be grabbing cups, things on a desk, or just trying to organize.
-
-We truly hope to help somebody with this, and it would be amazing if we could.
-
-This is S.E.N.S.E.\
-Spatial Echo Navigation & Sensing Equipment
+This project started when we were scrambling for ideas for the Science Fair. We weren’t exactly sure what we were going to do. We considered projects on radiation, contamination, and physics. We just weren’t sure what to do. We thought of our past experiences and what we could turn into a project that could help someone. One of our team members was blind for a certain amount of time. They had a hard time navigating through the world and even just picking things up without knocking them over. We thought about how many other people must deal with these problems, so we came up with an idea to fix it. We thought of a wearable device that would be able to help people overcome these obstacles. So we made S.E.N.S.E. Using ToF sensors, IMUs, and a microcontroller, we were able to fit a device that can help people navigate through the world and their home that is just the size of a glove. So with this, we present S.E.N.S.E., Spatial Echo Navigation & Sensing Equipment. The tool you can use to travel the world, that is just the size of your hand.
 
 <h1>How to Use</h1>
 
