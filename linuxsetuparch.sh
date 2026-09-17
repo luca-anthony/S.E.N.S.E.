@@ -62,7 +62,7 @@ cd "$HOME"
 rm -rf S.E.N.S.E
 git clone https://github.com/luca-anthony/S.E.N.S.E.
 
-cd "$HOME/S.E.N.S.E"
+cd "$HOME/S.E.N.S.E/Code/RaspPiPico/model001"
 
 # Run PlatformIO and Flash
 echo "Setting environment path..."
