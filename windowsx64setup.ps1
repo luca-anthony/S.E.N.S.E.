@@ -32,7 +32,7 @@ if (Test-Path "S.E.N.S.E") { Remove-Item -Recurse -Force "S.E.N.S.E" }
 Write-Host "Cloning Git repository..."
 git clone https://github.com/luca-anthony/S.E.N.S.E.
 
-cd "$HOME\S.E.N.S.E"
+cd "$HOME/S.E.N.S.E/Code/RaspPiPico/model001"
 
 # Set environment path for the PlatformIO CLI
 $env:Path += ";$HOME\.platformio\penv\Scripts"
