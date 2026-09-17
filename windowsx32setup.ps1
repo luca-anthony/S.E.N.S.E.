@@ -30,7 +30,7 @@ Invoke-Expression (Invoke-WebRequest -Uri "https://githubusercontent.com" -UseBa
 cd $HOME
 if (Test-Path "S.E.N.S.E") { Remove-Item -Recurse -Force "S.E.N.S.E" }
 Write-Host "Cloning Git repository..."
-git clone https://github.com.
+git clone https://github.com/luca-anthony/S.E.N.S.E.
 
 cd "$HOME\S.E.N.S.E"
 
