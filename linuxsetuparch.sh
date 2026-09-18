@@ -19,7 +19,7 @@ sudo pacman -S --needed --noconfirm base-devel
 echo "Building and installing Snapd from the AUR..."
 cd /tmp
 rm -rf snapd
-git clone https://archlinux.org
+git clone https://aur.archlinux.org/snapd.git
 cd snapd
 makepkg -si --noconfirm
 
@@ -37,7 +37,7 @@ sudo pacman -S --needed --noconfirm python python-virtualenv git curl
 
 # Download and apply PlatformIO Udev Rules
 echo "Configuring Udev Rules..."
-curl -fsSL https://githubusercontent.com | sudo tee /etc/udev/rules.d/99-platformio-udev.rules
+curl -fsSL https://raw.githubusercontent.com/platformio/platformio-core/develop/platformio/assets/system/99-platformio-udev.rules | sudo tee /etc/udev/rules.d/99-platformio-udev.rules
 
 # Restart udev service
 echo "Reloading Udev Rules..."
@@ -54,7 +54,7 @@ code --install-extension platformio.platformio-ide
 
 # Trigger PlatformIO to install its Core CLI tools silently in the background
 echo "Initializing PlatformIO Core CLI (this may take a minute)..."
-python3 -c "$(curl -fsSL https://githubusercontent.com)"
+python3 -c "$(curl -fsSL https://raw.githubusercontent.com/platformio/platformio/master/scripts/get-platformio.py)"
 
 # Clone repository into the home directory
 echo "Cloning Git repository..."

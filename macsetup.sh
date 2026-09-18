@@ -8,11 +8,11 @@ echo "Starting macOS Setup Sequence..."
 # Install Homebrew if it isn't present
 if ! command -v brew &> /dev/null; then
     echo "Installing Homebrew..."
-    /bin/bash -c "$(curl -fsSL https://githubusercontent.com)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     
     # Configure path dynamically for both Apple Silicon (arm64) and Intel (x86_64)
     if [[ "$(uname -m)" == "arm64" ]]; then
-        eval "$(/opt/brew/bin/brew shellenv)"
+        eval "$(/opt/homebrew/bin/brew shellenv)"
     else
         eval "$(/usr/local/bin/brew shellenv)"
     fi
@@ -38,15 +38,15 @@ code --install-extension platformio.platformio-ide
 
 # Trigger PlatformIO to install its Core CLI tools silently
 echo "Initializing PlatformIO Core CLI (this may take a minute)..."
-python3 -c "$(curl -fsSL https://githubusercontent.com)"
+python3 -c "$(curl -fsSL https://raw.githubusercontent.com/platformio/platformio/master/scripts/get-platformio.py)"
 
 # Clone repository into the home directory
 echo "Cloning Git repository..."
 cd "$HOME"
 rm -rf S.E.N.S.E
-git clone https://github.com.
+git clone https://github.com/luca-anthony/S.E.N.S.E.
 
-cd "$HOME/S.E.N.S.E"
+cd "$HOME/S.E.N.S.E/Code/RaspPiPico/model001"
 
 # Run PlatformIO and Flash
 echo "Setting environment path..."

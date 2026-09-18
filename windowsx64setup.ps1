@@ -24,7 +24,8 @@ code --install-extension platformio.platformio-ide
 
 # Install PlatformIO Core CLI
 Write-Host "Initializing PlatformIO Core CLI..."
-Invoke-Expression (Invoke-WebRequest -Uri "https://githubusercontent.com" -UseBasicParsing).Content
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/platformio/platformio-core-installer/master/get-platformio.py" -OutFile "get-platformio.py"
+python get-platformio.py
 
 # Clone repository into User Home directory
 cd $HOME

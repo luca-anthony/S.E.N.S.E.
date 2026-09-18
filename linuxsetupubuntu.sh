@@ -16,7 +16,7 @@ sudo apt install -y snapd
 
 # Install VSCode
 echo "Installing Visual Studio Code..."
-wget -O vscode.deb "https://visualstudio.com"
+wget -O vscode.deb "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64"
 sudo apt update 
 sudo apt install -y ./vscode.deb
 rm vscode.deb
@@ -28,7 +28,7 @@ sudo apt install -y python3-venv git curl
 
 # Download and apply PlatformIO Udev Rules
 echo "Configuring Udev Rules..."
-curl -fsSL https://githubusercontent.com | sudo tee /etc/udev/rules.d/99-platformio-udev.rules
+curl -fsSL https://raw.githubusercontent.com/platformio/platformio-core/develop/platformio/assets/system/99-platformio-udev.rules | sudo tee /etc/udev/rules.d/99-platformio-udev.rules
 
 # Restart udev service
 sudo service udev restart
@@ -43,7 +43,7 @@ code --install-extension platformio.platformio-ide
 
 # Trigger PlatformIO to install its Core CLI tools silently in the background
 echo "Initializing PlatformIO Core CLI (this may take a minute)..."
-python3 -c "$(curl -fsSL https://githubusercontent.com)"
+python3 -c "$(curl -fsSL https://raw.githubusercontent.com/platformio/platformio/master/scripts/get-platformio.py)"
 
 # Clone repository into the home directory
 echo "Cloning Git repository..."

@@ -1,19 +1,19 @@
 # Stop script execution if any command fails
 $ErrorActionPreference = "Stop"
 
-Write-Host "Starting Windows x64 Setup Sequence..."
+Write-Host "Starting Windows x32 Setup Sequence..."
 
 # Install Git
 Write-Host "Installing Git..."
-winget install --id Git.Git -e --source winget --accept-source-agreements --accept-package-agreements
+winget install --id Git.Git -e --architecture x86 --source winget --accept-source-agreements --accept-package-agreements
 
-# Install Python 3 (64-bit)
+# Install Python 3 (32-bit)
 Write-Host "Installing Python..."
-winget install --id Python.Python.3 -e --source winget --accept-source-agreements --accept-package-agreements
+winget install --id Python.Python.3 -e --architecture x86 --source winget --accept-source-agreements --accept-package-agreements
 
-# Install VS Code (64-bit System/User Installer)
+# Install VS Code (32-bit System/User Installer)
 Write-Host "Installing Visual Studio Code..."
-winget install --id Microsoft.VisualStudioCode -e --source winget --accept-source-agreements --accept-package-agreements
+winget install --id Microsoft.VisualStudioCode -e --architecture x86 --source winget --accept-source-agreements --accept-package-agreements
 
 # Refresh environment variables so newly installed tools are visible immediately
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
@@ -24,7 +24,8 @@ code --install-extension platformio.platformio-ide
 
 # Install PlatformIO Core CLI
 Write-Host "Initializing PlatformIO Core CLI..."
-Invoke-Expression (Invoke-WebRequest -Uri "https://githubusercontent.com" -UseBasicParsing).Content
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/platformio/platformio-core-installer/master/get-platformio.py" -OutFile "get-platformio.py"
+python get-platformio.py
 
 # Clone repository into User Home directory
 cd $HOME
@@ -43,4 +44,4 @@ pio project init --board pico
 Write-Host "Compiling and Flashing firmware..."
 pio run --target upload
 
-Write-Host "Windows x64 setup and flashing sequence complete!"
+Write-Host "Windows x32 setup and flashing sequence complete!"
