@@ -183,9 +183,9 @@ void VL53L1XLogic2() {
     // - count increases (e.g., 1 to 5 pulses)
     // - duration increases (e.g., 50ms to 200ms per pulse)
     // - gap decreases (e.g., 200ms down to 30ms between pulses for higher frequency)
-    int count    = map(constrainedDiff, 0, DIST_THRESH, 1, 5);
+    int count = map(constrainedDiff, 0, DIST_THRESH, 1, 5);
     int duration = map(constrainedDiff, 0, DIST_THRESH, 50, 200);
-    int gap      = map(constrainedDiff, 0, DIST_THRESH, 200, 30);
+    int gap = map(constrainedDiff, 0, DIST_THRESH, 200, 30);
 
     buzzPattern(count, duration, gap);
   }
