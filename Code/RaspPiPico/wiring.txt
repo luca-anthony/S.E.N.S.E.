@@ -6,8 +6,7 @@
       POWER & I2C SHARED BUS
 ----------------------------------
 * I2C Bus: Using I2C0 hardware bus.
-  - SDA (GP4) and SCL (GP5) are shared across the VL53L1X, 
-    IMU #1, and IMU #2 in parallel.
+  - SDA (GP4) and SCL (GP5) go to the VL53L1X.
 * Power Rails:
   - 3.3V Rail: Pin 36 (3V3 OUT)
   - 5V Rail: Pin 40 (VBUS - raw USB 5V for motor)
@@ -22,22 +21,12 @@ SDA --> Pin 6  / GP4 (I2C0 SDA)
 SCL --> Pin 7  / GP5 (I2C0 SCL)
 
 ----------------------------------
-        IMU #1 (Hand Back)
+      FLEX SENSOR (Ring Finger)
 ----------------------------------
-VCC --> Pin 36 / 3V3 OUT
-GND --> Pin 8  / GND
-SDA --> Pin 6  / GP4 (I2C0 SDA)
-SCL --> Pin 7  / GP5 (I2C0 SCL)
-AD0 --> Pin 8  / GND            (Sets I2C Address to 0x68)
-
-----------------------------------
-        IMU #2 (Finger Tip)
-----------------------------------
-VCC --> Pin 36 / 3V3 OUT
-GND --> Pin 13 / GND
-SDA --> Pin 6  / GP4 (I2C0 SDA)
-SCL --> Pin 7  / GP5 (I2C0 SCL)
-AD0 --> Pin 36 / 3V3 OUT        (Sets I2C Address to 0x69)
+PIN 1 --> Pin 36 / 3V3 OUT
+PIN 2 --> Pin 31 / GP26 (ADC0) & 10K Resistor
+10K R --> Pin 33 / AGND
+(No polarity. Printed side faces the finger.)
 
 ----------------------------------
       MOTOR / TRANSISTOR / DIODE
