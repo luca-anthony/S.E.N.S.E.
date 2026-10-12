@@ -14,6 +14,7 @@ ZD10-100 500G Flex Sensor<sup>[11]</sup> \
 70 On/Off Toggle Switch<sup>[12]</sup> \
 8 Half -Finger Glove<sup>[13]</sup> \
 8 Velcro Sets (By Two)<sup>[14]</sup>
+10 USB-C 3.7V LiPo Battery Charger<sup>[15]</sup>
 
 <h4>AMOUNT NEEDED</h4>
 
@@ -30,7 +31,8 @@ Raspberry Pi Pico<sup>[6]</sup> - ALL \
 ZD10-100 500G Flex Sensor<sup>[11]</sup> - ALL \
 70 On/Off Toggle Switch<sup>[12]</sup> - ONE \
 8 Half -Finger Glove<sup>[13]</sup> - ONE \
-8 Velcro Sets (By Two)<sup>[14]</sup> - UNKOWN
+8 Velcro Sets (By Two)<sup>[14]</sup> - UNKOWN \
+10 USB-C 3.7V LiPo Battery Charger<sup>[15]</sup> - ONE
 
 
 <h4>COSTS</h4>
@@ -48,15 +50,16 @@ Raspberry Pi Pico<sup>[6]</sup> - $7.99 USD \
 ZD10-100 500G Flex Sensor<sup>[11]</sup> - $8.64 USD \
 70 On/Off Toggle Switch<sup>[12]</sup> - $6.99 USD
 8 Half -Finger Glove<sup>[13]</sup> - $5.98 USD \
-8 Velcro Sets (By Two)<sup>[14]</sup> - $8.65 USD
+8 Velcro Sets (By Two)<sup>[14]</sup> - $8.65 USD \
+10 USB-C 3.7V LiPo Battery Charger<sup>[15]</sup> - $7.99 USD
 
 <h2>DESIGNER COST</h2>
 
-$114.91 USD (EXCLUDING SHIPPING AND TAX)
+$115.70 USD (EXCLUDING SHIPPING AND TAX)
 
 <h2>CONSUMER COST</h2>
 
-$42.30 USD (EXCLUDING SHIPPING, TAX,  AND UNKNOWN COSTS)
+$43.10 USD (EXCLUDING SHIPPING, TAX,  AND UNKNOWN COSTS)
 
 <h4>LINKS</h4>
 
@@ -73,6 +76,7 @@ $42.30 USD (EXCLUDING SHIPPING, TAX,  AND UNKNOWN COSTS)
 <a href="https://www.amazon.com/dp/B07MHTWR1C/?coliid=I29DUDP41U3ME5&colid=34EPBK9HDNNCG&psc=1&ref_=list_c_wl_lv_ov_lig_dp_it">ZD10-100 500G Flex Sensor<sup>[11]</sup></a> \
 <a href="https://www.amazon.com/dp/B09R43HCY3/?coliid=I26ZBUR5MZKZ8E&colid=34EPBK9HDNNCG&psc=1&ref_=list_c_wl_lv_ov_lig_dp_it">70 On/Off Toggle Switch<sup>[12]</sup></a> \
 <a href="https://www.amazon.com/dp/B09BNPX3XJ/?coliid=I1KJKJH1DOFMCP&colid=34EPBK9HDNNCG&psc=1&ref_=list_c_wl_lv_ov_lig_dp_it">8 Half -Finger Glove<sup>[13]</sup></a> \
-<a href="https://www.amazon.com/dp/B0G93RMJP3/?coliid=I3TW2GHVSWFGI&colid=34EPBK9HDNNCG&psc=1&ref_=list_c_wl_lv_ov_lig_dp_it">8 Velcro Sets (By Two)<sup>[14]</sup></a>
+<a href="https://www.amazon.com/dp/B0G93RMJP3/?coliid=I3TW2GHVSWFGI&colid=34EPBK9HDNNCG&psc=1&ref_=list_c_wl_lv_ov_lig_dp_it">8 Velcro Sets (By Two)<sup>[14]</sup></a> \
+<a href="https://www.amazon.com/dp/B0BRXYZTWN/?coliid=ITERTJ6L57AM3&colid=34EPBK9HDNNCG&psc=1&ref_=list_c_wl_lv_ov_lig_dp_it">10 USB-C 3.7V LiPo Battery Charger<sup>[15]</sup></a>
 
 <a href="https://www.amazon.com/hz/wishlist/ls/34EPBK9HDNNCG?ref_=wl_share">AMAZON LIST</a>
