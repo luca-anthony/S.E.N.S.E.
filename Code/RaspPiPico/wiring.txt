@@ -19,14 +19,16 @@ VCC --> Pin 36 / 3V3 OUT
 GND --> Pin 3  / GND
 SDA --> Pin 6  / GP4 (I2C0 SDA)
 SCL --> Pin 7  / GP5 (I2C0 SCL)
+[4 Wires Each (8 Total)]
 
 ----------------------------------
       FLEX SENSOR (Ring Finger)
 ----------------------------------
 PIN 1 --> Pin 36 / 3V3 OUT
-PIN 2 --> Pin 31 / GP26 (ADC0) & 10K Resistor
-10K R --> Pin 33 / AGND
-(No polarity. Printed side faces the finger.)
+PIN 2 --> Pin 31 / GP26 (ADC0)
+10K R SIDE 1 --> Pin 33 / AGND
+10K R SIDE 2 --> PIN 2
+[2 Wires]
 
 ----------------------------------
       MOTOR / TRANSISTOR / DIODE
@@ -36,6 +38,7 @@ EMITTER   --> Pin 18 / GND
 BASE      --> 1K Resistor
 1K R      --> Pin 22 / GP17 (PWM control)
 COLLECTOR --> MOTOR NEG / DIODE ANODE
+[2 Wires]
 
 ----DIODE (Flyback)
 CATHODE   --> Pin 40 / VBUS (5V USB Power)
@@ -45,9 +48,4 @@ ANODE     --> COLLECTOR / MOTOR NEG
 POS       --> Pin 40 / VBUS (Connected to Diode Cathode)
 NEG       --> COLLECTOR / DIODE ANODE
 
-----------------------------------
-            STATUS LED
-----------------------------------
-ANODE (+) --> 220Ω Resistor
-220Ω R    --> Pin 24 / GP18
-CATHODE(-)--> Pin 23 / GND
+
