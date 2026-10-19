@@ -48,4 +48,8 @@ ANODE     --> COLLECTOR / MOTOR NEG
 POS       --> Pin 40 / VBUS (Connected to Diode Cathode)
 NEG       --> COLLECTOR / DIODE ANODE
 
-
+----------------------------------
+             BUTTON
+----------------------------------
+PIN 1 --> Pin 34 / GP28
+PIN 2 --> Pin 33 / GND
