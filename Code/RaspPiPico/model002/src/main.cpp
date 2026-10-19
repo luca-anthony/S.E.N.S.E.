@@ -8,7 +8,7 @@
 //======================
 const int MOT_IO = 17;
 const int LED_IO = 18;
-const int BTN_IO = 19;
+const int BTN_IO = 28;
 const int FLEX_IO = 26; // ADC0
 
 const int DIST_THRESH = 100;
