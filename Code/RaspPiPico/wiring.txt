@@ -19,7 +19,6 @@ VCC --> Pin 36 / 3V3 OUT
 GND --> Pin 3  / GND
 SDA --> Pin 6  / GP4 (I2C0 SDA)
 SCL --> Pin 7  / GP5 (I2C0 SCL)
-[4 Wires Each (8 Total)]
 
 ----------------------------------
       FLEX SENSOR (Ring Finger)
