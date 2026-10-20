@@ -19,7 +19,6 @@ VCC --> Pin 36 / 3V3 OUT
 GND --> Pin 3  / GND
 SDA --> Pin 6  / GP4 (I2C0 SDA)
 SCL --> Pin 7  / GP5 (I2C0 SCL)
-[4 Wires Each (8 Total)]
 
 ----------------------------------
       FLEX SENSOR (Ring Finger)
@@ -41,11 +40,11 @@ COLLECTOR --> MOTOR NEG / DIODE ANODE
 [2 Wires]
 
 ----DIODE (Flyback)
-CATHODE   --> Pin 40 / VBUS (5V USB Power)
+CATHODE   --> Pin 39 / VSYS
 ANODE     --> COLLECTOR / MOTOR NEG
 
 ----MOTOR (ERM Vibration Coin)
-POS       --> Pin 40 / VBUS (Connected to Diode Cathode)
+POS       --> Pin 39 / VSYS
 NEG       --> COLLECTOR / DIODE ANODE
 
 ----------------------------------

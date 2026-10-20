@@ -1,0 +1,3 @@
+On the PCB, I accidentally flipped the sign for the transistor.
+This is not technically a problem; the transistor just needs to be flipped.
+The flat side of the transistor needs to be on the curved part of the PCB.
