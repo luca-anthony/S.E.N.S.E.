@@ -1,7 +1,0 @@
-"Id";"Designator";"Footprint";"Quantity";"Designation";"Supplier and ref";
-1;"A1";"RPi_Pico_SMD_TH";1;"RPi_Pico_SMD_TH";;;
-2;"A2";"TP4056-18650";1;"TP4056-18650";;;
-3;"CN1";"JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical";1;"JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical";;;
-4;"D1";"D_DO-41_SOD81_P10.16mm_Horizontal";1;"D_DO-41_SOD81_P10.16mm_Horizontal";;;
-5;"Q1";"TO-92L_Inline";1;"TO-92L_Inline";;;
-6;"R1, R2";"R_0805_2012Metric_Pad1.20x1.40mm_HandSolder";2;"R_0805_2012Metric_Pad1.20x1.40mm_HandSolder";;;

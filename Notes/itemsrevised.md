@@ -80,3 +80,6 @@ $43.10 USD (EXCLUDING SHIPPING, TAX,  AND UNKNOWN COSTS)
 <a href="https://www.amazon.com/dp/B0BRXYZTWN/?coliid=ITERTJ6L57AM3&colid=34EPBK9HDNNCG&psc=1&ref_=list_c_wl_lv_ov_lig_dp_it">10 USB-C 3.7V LiPo Battery Charger<sup>[15]</sup></a>
 
 <a href="https://www.amazon.com/hz/wishlist/ls/34EPBK9HDNNCG?ref_=wl_share">AMAZON LIST</a>
+
+<h1>PCB TYPES</h1>
+
