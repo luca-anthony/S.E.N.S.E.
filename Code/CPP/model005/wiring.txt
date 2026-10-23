@@ -1,0 +1,28 @@
+Battery POS --> B+ TP4056
+Battery NEG --> B- TP4056
+
+TP4056 OUT+ --> Switch Pin 2
+TP4056 OUT- --> ESP GND
+
+Switch Pin 3 --> ESP 5V
+
+ESP 3V3 --> tof VCC
+ESP GND --> tof GND
+ESP D4 / SDA / GPIO6 --> tof SDA
+ESP D5 / SCL / GPIO7 --> tof SCL
+
+ESP GND --> Transistor Emitter
+ESP D0 / A0 / GPIO2 --> 1k Resistor
+1k Resistor --> Transistor Base
+
+Diode Anode --> Transistor Collector
+Diode Cathode --> 5V
+
+Motor POS --> 5V
+Motor NEG --> Transistor Collector / Diode Anode
+
+BTN PIN 1 --> ESP GND
+BTN PIN 2 --> D1 / A1 / GPIO3
+
+Transistor Note:
+Left - Emitter Middle - Base Right - Collector

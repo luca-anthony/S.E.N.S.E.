@@ -1,7 +1,7 @@
 #include <Arduino.h>
 #include <Wire.h>
 #include <Adafruit_VL53L1X.h>
-#include <Preferences.h>
+#include <EEPROM.h>
 
 //======================
 // INPUTS AND VARIABLES
@@ -25,19 +25,10 @@ const unsigned long DEBOUNCE_MS        = 200;  // button debounce window
 const float DISTANCE_SMOOTHING_ALPHA   = 0.35; // 0=very smooth/slow, 1=raw/instant
 const float FLEX_SMOOTHING_ALPHA       = 0.35;
 
-#define IRQ_PIN -1
-#define XSHUT_PIN -1
-
-#undef Wire
-arduino::MbedI2C Wire(4, 5);
-
-Adafruit_VL53L1X sensor = Adafruit_VL53L1X();
-
 //======================
 //       GLOBALS
 //======================
-Adafruit_VL53L1X vl53 = Adafruit_VL53L1X(XSHUT_PIN, IRQ_PIN);
-Preferences prefs;
+Adafruit_VL53L1X vl53 = Adafruit_VL53L1X();
 
 int mode = 1; // 1 = navigation, 2 = close-range
 float smoothedDistanceCM = -1;      // -1 means "no valid reading yet"
@@ -47,6 +38,7 @@ bool handExtended = false;
 unsigned long lastSensRead = 0;
 unsigned long lastDebounceTime = 0;
 int16_t distance = 0;
+int16_t lastDistance = -1;
 
 int lastButtonReading = HIGH; // pull=up idle state
 int lastButtonState = HIGH; 
@@ -114,30 +106,23 @@ void flexLogic() {
 void modeSwitch() {
   int reading = digitalRead(BTN_IO);
 
-  if (reading != lastButtonState) {
+  if (reading != lastButtonReading) {
     lastDebounceTime = millis();
+    lastButtonReading = reading;
   }
 
-  if ((millis() - lastDebounceTime) > DEBOUNCE_MS) {
-    // If the button state has stably changed to LOW (pressed)
-    if (reading == LOW && lastButtonState == HIGH) {
-      // Toggle mode between 1 and 2
+  if ((millis() - lastDebounceTime) > DEBOUNCE_MS && reading != lastButtonState) {
+    lastButtonState = reading;
+    if (lastButtonState == LOW) {
       mode = (mode == 1) ? 2 : 1;
-      
       Serial.print("Mode changed to: ");
       Serial.println(mode);
-      
-      // Save the preference permanently
-      prefs.putUChar("mode", mode);
-      
-      // Provide feedback
+      EEPROM.write(0, mode);
+      EEPROM.commit();
       announceMode();
     }
   }
-
-  lastButtonState = reading;
 }
-
 //======================
 //     INIT VL53L1X
 //======================
@@ -146,14 +131,14 @@ void initVL53L1X() {
   if (!vl53.begin(0x29, &Wire)) {
     Serial.print(F("Error on initializing VL53L1X sensor: "));
     Serial.println(vl53.vl_status);
-    while (1) delay(10);
+    while (1) { announceError(); delay(2000); }
   }
   Serial.println(F("VL53L1X OK!"));
   
   if (!vl53.startRanging()) {
     Serial.print(F("Couldn't start ranging: "));
     Serial.println(vl53.vl_status);
-    while (1) delay(10);
+    while (1) { announceError(); delay(2000); }
   }
   
   // Timing budget options: 15, 20, 33, 50, 100, 200 ms
@@ -164,7 +149,6 @@ void initVL53L1X() {
 //    VL53L1X LOGIC1
 //======================
 void VL53L1XLogic1() {
-  static int16_t lastDistance = -1; 
 
   if (distance != -1) {
     if (lastDistance != -1) {
@@ -181,6 +165,8 @@ void VL53L1XLogic1() {
 //    VL53L1X LOGIC2
 //======================
 void VL53L1XLogic2() {
+  if (distance < 0) return;
+
   Serial.println(F("RUNNING VL53L1X LOGIC FOR MODE 2"));
 
   int difference = DIST_THRESH - distance;
@@ -208,6 +194,7 @@ void VL53L1XLogic2() {
 //======================
 void setup() {
   Serial.begin(115200);
+  while (!Serial && millis() < 3000);
 
   // Set Pin-Modes
   pinMode(MOT_IO, OUTPUT);
@@ -215,6 +202,8 @@ void setup() {
   pinMode(BTN_IO, INPUT_PULLUP);
   pinMode(FLEX_IO, INPUT);
 
+  Wire.setSDA(4);
+  Wire.setSCL(5);
   Wire.begin(); // Initialize I2C communication
 
   // Initialize DISTSENS
@@ -222,8 +211,9 @@ void setup() {
 
   // Restore last-used mode so the wearer doesn't have to re-select it
   // every time the device powers on.
-  prefs.begin("sense", false);
-  mode = prefs.getUChar("mode", 1);
+  EEPROM.begin(256);
+  mode = EEPROM.read(0);
+  if (mode != 1 && mode != 2) mode = 1;   // blank flash reads as 255
 
   announceReady();
 }
@@ -247,8 +237,10 @@ void loop() {
     vl53.clearInterrupt();
 
     // Hand curled, stay silent
-    if (!handExtended) return;
-
+    if (!handExtended) {
+      lastDistance = -1;   // forget old reading
+      return;
+    }
     // Mode 1
     if (mode == 1) {
       VL53L1XLogic1();

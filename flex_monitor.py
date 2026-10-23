@@ -6,6 +6,7 @@ Needs pyserial (pip install pyserial).
 
     python flex_monitor.py              live view
     python flex_monitor.py --calibrate  prints FLEX_ON_THRESH / FLEX_OFF_THRESH
+    python flex_monitor.py --raw        prints everything the Pico sends
     python flex_monitor.py COM5         pick the port yourself
 """
 
@@ -44,6 +45,13 @@ def read_flex(ser):
         return int(raw), float(smoothed), extended == "1"
     except ValueError:
         return None
+
+
+def raw(ser):
+    while True:
+        line = ser.readline().decode(errors="ignore").strip()
+        if line:
+            print(line)
 
 
 def live(ser):
@@ -97,7 +105,12 @@ def calibrate(ser):
 def main():
     ser = serial.Serial(find_port(), BAUD, timeout=1)
     try:
-        calibrate(ser) if "--calibrate" in sys.argv else live(ser)
+        if "--raw" in sys.argv:
+            raw(ser)
+        elif "--calibrate" in sys.argv:
+            calibrate(ser)
+        else:
+            live(ser)
     except KeyboardInterrupt:
         print()
     finally:
